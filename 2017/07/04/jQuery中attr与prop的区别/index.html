@@ -1,0 +1,695 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="attr()和prop()都是用来获取被选元素的方法，定义和用法都是一样的：设置或返回被选元素的属性和值。用attr()方法返回的属性是字符串，而用prop()返回的是true/false,当直接添加该属性名称就能生效的属性，可以直接使用prop()设置。 学习中遇到的两列问题 如下：html&amp;gt;1234567891011121314151617181920212223242526272829303">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery中attr()与prop()">
+<meta property="og:url" content="http://yoursite.com/2017/07/04/jQuery中attr与prop的区别/index.html">
+<meta property="og:site_name" content="西元前">
+<meta property="og:description" content="attr()和prop()都是用来获取被选元素的方法，定义和用法都是一样的：设置或返回被选元素的属性和值。用attr()方法返回的属性是字符串，而用prop()返回的是true/false,当直接添加该属性名称就能生效的属性，可以直接使用prop()设置。 学习中遇到的两列问题 如下：html&amp;gt;1234567891011121314151617181920212223242526272829303">
+<meta property="og:updated_time" content="2017-07-04T07:35:07.759Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery中attr()与prop()">
+<meta name="twitter:description" content="attr()和prop()都是用来获取被选元素的方法，定义和用法都是一样的：设置或返回被选元素的属性和值。用attr()方法返回的属性是字符串，而用prop()返回的是true/false,当直接添加该属性名称就能生效的属性，可以直接使用prop()设置。 学习中遇到的两列问题 如下：html&amp;gt;1234567891011121314151617181920212223242526272829303">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/04/jQuery中attr与prop的区别/"/>
+
+
+
+
+
+  <title>jQuery中attr()与prop() | 西元前</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">西元前</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/04/jQuery中attr与prop的区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘珠">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://wx4.sinaimg.cn/mw1024/7fcb62e8ly1fgm1vtgy37j20k00qo3zm.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="西元前">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">jQuery中attr()与prop()</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T14:04:16+08:00">
+                2017-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>attr()和prop()都是用来获取被选元素的方法，定义和用法都是一样的：<br>设置或返回被选元素的属性和值。<br>用attr()方法返回的属性是字符串，而用prop()返回的是true/false,当直接添加该属性名称就能生效的属性，可以直接使用prop()设置。</p>
+<p>学习中遇到的两列问题 如下：<br><figure class="highlight plain"><figcaption><span>html></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;复选框&lt;/title&gt;</div><div class="line">    &lt;script src=&quot;http://code.jquery.com/jquery-3.1.1.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;form&gt;</div><div class="line">    你的爱好运动是？&lt;br&gt;</div><div class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;足球&quot;&gt;足球</div><div class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;篮球&quot;&gt;篮球</div><div class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;羽毛球&quot;&gt;羽毛球</div><div class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;items&quot; value=&quot;橄榄球&quot;&gt;橄榄球</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;input type=&quot;button&quot; id=&quot;CheckedAll&quot; value=&quot;全选&quot;&gt;</div><div class="line">    &lt;input type=&quot;button&quot; id=&quot;CheckedNo&quot; value=&quot;全不选&quot;&gt;</div><div class="line">    &lt;input type=&quot;button&quot; id=&quot;CheckedRev&quot; value=&quot;反选&quot;&gt;</div><div class="line">    &lt;input type=&quot;button&quot; id=&quot;send&quot; value=&quot;提交&quot;&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;script&gt;</div><div class="line"></div><div class="line">    $(function () &#123;</div><div class="line">        $(&quot;#CheckedAll&quot;).click(function()&#123;</div><div class="line">            $(&quot;[name=items]:checkbox&quot;).attr(&quot;checked&quot;,true);</div><div class="line">        &#125;);</div><div class="line">        $(&quot;#CheckedNo&quot;).click(function () &#123;</div><div class="line">            $(&quot;[name=items]:checkbox&quot;).attr(&quot;checked&quot;,false);</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        $(&quot;#CheckedRev&quot;).click(function () &#123;</div><div class="line">            $(&quot;[name=items]:checkbox&quot;).each(function()&#123;</div><div class="line">                this.checked = !this.checked;</div><div class="line">            &#125;);</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        $(&quot;#send&quot;).click(function () &#123;</div><div class="line">            var str = &quot;你选中的是: \r\n&quot;;</div><div class="line">            $(&apos;[name=items]:checkbox:checked&apos;).each(function()&#123;</div><div class="line">                str += $(this).val()+&quot;\r\n&quot;;</div><div class="line">            &#125;);</div><div class="line">            alert(str);</div><div class="line">        &#125;);</div><div class="line">    &#125;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p> <em>问题描述</em>当选中其中一个后点击全选正确选中，但当点击全不选后，使用全选选中的可以取消，第一次单点选中的无法取消。<br><figure class="highlight plain"><figcaption><span>html></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div></pre></td><td class="code"><pre><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;单选框&lt;/title&gt;</div><div class="line">    &lt;script src=&quot;http://code.jquery.com/jquery-3.1.1.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">        *&#123;</div><div class="line">            margin:0;</div><div class="line">            padding:0;</div><div class="line">        &#125;</div><div class="line">        table&#123;</div><div class="line">            width: 416px;</div><div class="line">            height: 180px;</div><div class="line">            border: 1px solid #000;</div><div class="line">        &#125;</div><div class="line">        tr&#123;</div><div class="line">            display: inline-block;</div><div class="line">            margin:0;</div><div class="line">        &#125;</div><div class="line">        th,td&#123;</div><div class="line">            width:104px;</div><div class="line">            height: 36px;</div><div class="line">            text-align: left;</div><div class="line">        &#125;</div><div class="line">        input&#123;</div><div class="line">            line-height:30px;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        .even&#123;</div><div class="line">            background:#FFF38F;</div><div class="line">        &#125;</div><div class="line">        .odd&#123;</div><div class="line">            background:#ffffee;</div><div class="line">        &#125;</div><div class="line">        .select&#123;</div><div class="line">            background:#FF3300;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;table&gt;</div><div class="line">        &lt;thead&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;th&gt;&lt;/th&gt;</div><div class="line">                &lt;th&gt;姓名&lt;/th&gt;</div><div class="line">                &lt;th&gt;性别&lt;/th&gt;</div><div class="line">                &lt;th&gt;暂住证&lt;/th&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">        &lt;/thead&gt;</div><div class="line">        &lt;tbody&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;td&gt;&lt;input type=&quot;radio&quot; value=&quot;&quot; name=&quot;choice&quot;&gt;&lt;/td&gt;</div><div class="line">                &lt;td&gt;张山&lt;/td&gt;</div><div class="line">                &lt;td&gt;男&lt;/td&gt;</div><div class="line">                &lt;td&gt;浙江宁波&lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;td&gt;&lt;input type=&quot;radio&quot; value=&quot;&quot; name=&quot;choice&quot;&gt;&lt;/td&gt;</div><div class="line">                &lt;td&gt;王麻&lt;/td&gt;</div><div class="line">                &lt;td&gt;男&lt;/td&gt;</div><div class="line">                &lt;td&gt;陕西西安&lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;td&gt;&lt;input type=&quot;radio&quot; value=&quot;&quot; name=&quot;choice&quot;&gt;&lt;/td&gt;</div><div class="line">                &lt;td&gt;李四&lt;/td&gt;</div><div class="line">                &lt;td&gt;男&lt;/td&gt;</div><div class="line">                &lt;td&gt;湖南长沙&lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;td&gt;&lt;input type=&quot;radio&quot; value=&quot;&quot; name=&quot;choice&quot;&gt;&lt;/td&gt;</div><div class="line">                &lt;td&gt;二狗&lt;/td&gt;</div><div class="line">                &lt;td&gt;男&lt;/td&gt;</div><div class="line">                &lt;td&gt;上海浦东&lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;td&gt;&lt;input type=&quot;radio&quot; value=&quot;&quot; name=&quot;choice&quot; checked=&quot;checked&quot;&gt;&lt;/td&gt;</div><div class="line">                &lt;td&gt;黑猪&lt;/td&gt;</div><div class="line">                &lt;td&gt;男&lt;/td&gt;</div><div class="line">                &lt;td&gt;大西洋&lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">        &lt;/tbody&gt;</div><div class="line">    &lt;/table&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        $(function()&#123;</div><div class="line">            $(&apos;tbody&gt;tr:odd&apos;).addClass(&apos;odd&apos;);</div><div class="line">            $(&apos;tbody tr:even&apos;).addClass(&apos;even&apos;);</div><div class="line">            $(&apos;tbody&gt;tr&apos;).click(function()&#123;</div><div class="line">                $(this)  //表示单击的这行</div><div class="line">                    .addClass(&apos;select&apos;)  //给所有的tr添加高亮</div><div class="line">                    .siblings().removeClass(&apos;select&apos;)  //给它的兄弟元素去掉高亮</div><div class="line">                    .end()   //1</div><div class="line">                    .find(&apos;:radio&apos;).attr(&quot;checked&quot;,true); //1</div><div class="line">            &#125;)</div><div class="line">            $(&quot;table :radio:checked&quot;).parents(&apos;tr&apos;).addClass(&apos;select&apos;);</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p> <em>问题描述</em>单击一行时，单选按钮被选中，但是当点击一遍后，单选按钮全部添加了checked=”checked”属性，当再次点击其它按钮时，单选按钮的选中状态会保持在最后一次点击的按钮</p>
+<p>以上两个问题都是我在根据锋利的jQuery学习练习过程中出现的问题，并且之前都没有解决，今天在回过头研究attr()和prop()方法时，发现只要用prop()方法将attr()替换，问题不会出现问题。<br>所以当今后使用jQuery,应该用prop()方法获取和设置checked属性，disabled,selected也一样。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/16/关于用Hexo和Github建个人博客遇到的问题/" rel="next" title="关于用Hexo和Github建个人博客遇到的问题">
+                <i class="fa fa-chevron-left"></i> 关于用Hexo和Github建个人博客遇到的问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://wx4.sinaimg.cn/mw1024/7fcb62e8ly1fgm1vtgy37j20k00qo3zm.jpg"
+               alt="刘珠" />
+          <p class="site-author-name" itemprop="name">刘珠</p>
+           
+              <p class="site-description motion-element" itemprop="description">剑未佩妥，出门便已是江湖</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/liuzhu1995" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005052144035560/home?from=page_100505&mod=TAB&is_all=1#place" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/liu-zhu-63-85/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=66 src="//music.163.com/outchain/player?type=2&id=483690049&auto=1&height=66"></iframe>
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘珠</span>
+</div>
+
+
+<div class="powered-by">
+  NaN 没人能理解我的灵魂
+</div>
+
+<div class="theme-info">
+  博客 -
+  yuibo
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
