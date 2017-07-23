@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，也看了别 人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写的比较繁琐，if语 句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间也写了好些笔记在本子上，现在将它搬上来** **节点信息** childNodes可以获取任意节点的所有子节点集合 通过节点类型nodeType区分的有(elem">
+<meta name="description" content="**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料， 也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写 的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间 也写了好些笔记在本子上，现在将它搬上来** **节点信息** childNodes可以获取任意节点的所有子节点集合 通过节点类型nodeType区分的有(ele">
 <meta property="og:type" content="article">
 <meta property="og:title" content="百度前端学院 js任务 笔记(一)">
 <meta property="og:url" content="http://yoursite.com/2017/07/23/百度前端学院-js任务-笔记-一/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，也看了别 人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写的比较繁琐，if语 句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间也写了好些笔记在本子上，现在将它搬上来** **节点信息** childNodes可以获取任意节点的所有子节点集合 通过节点类型nodeType区分的有(elem">
-<meta property="og:updated_time" content="2017-07-23T13:55:43.175Z">
+<meta property="og:description" content="**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料， 也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写 的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间 也写了好些笔记在本子上，现在将它搬上来** **节点信息** childNodes可以获取任意节点的所有子节点集合 通过节点类型nodeType区分的有(ele">
+<meta property="og:updated_time" content="2017-07-23T13:58:08.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="百度前端学院 js任务 笔记(一)">
-<meta name="twitter:description" content="**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，也看了别 人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写的比较繁琐，if语 句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间也写了好些笔记在本子上，现在将它搬上来** **节点信息** childNodes可以获取任意节点的所有子节点集合 通过节点类型nodeType区分的有(elem">
+<meta name="twitter:description" content="**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料， 也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写 的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间 也写了好些笔记在本子上，现在将它搬上来** **节点信息** childNodes可以获取任意节点的所有子节点集合 通过节点类型nodeType区分的有(ele">
 
 
 
@@ -340,14 +340,16 @@
       
 
       
-        <pre><code>**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，也看了别
-人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写的比较繁琐，if语
-句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间也写了好些笔记在本子上，现在将它搬上来**
+        <pre><code>**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，
+也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写
+的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间
+也写了好些笔记在本子上，现在将它搬上来**
 **节点信息**
 childNodes可以获取任意节点的所有子节点集合
-通过节点类型nodeType区分的有(element元素节点(1,节点类型)，attr属性节点(2),text文本节点(3),comments注释(8),document(9))
+通过节点类型nodeType区分的有(element元素节点(1,节点类型)，attr属性节点(2),text文本节点(3),
+comments注释(8),document(9))
 element是node多种类型的其中一种，当nodeType == 1 时就是元素节点，它拥有id,class,children等属性。
-</code></pre><p>   <strong>subString(a,b)</strong><br>   用于提取字符串中介于两个指定下标之间的字符,它有两个参数,都是非负的证书,第一个要提取的字符串的第一个字符,第二个可选,如果省略返回的字符串一直到字符串的结尾。</p>
+</code></pre><p>   <strong>subString(a,b)</strong><br>   用于提取字符串中介于两个指定下标之间的字符,它有两个参数,都是非负的证书,第一个要提取的字符串<br>   的第一个字符,第二个可选,如果省略返回的字符串一直到字符串的结尾。</p>
 <pre><code>**innerHTML和innerText**
 innerHTML 设置或返回指定元素开始标签与结束标签中的所有元素(自己和所有子元素)内容，包括标签元素。
 innerText 设置或者返回指定元素开始标签与结束标签中的所有(自己和所有子元素)文本内容。
