@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="**任务描述** 参考示例图，在页面中展现一颗二叉树的结构 提供一个按钮，显示开始遍历，点击后，以动画的形式呈现遍历的过程 二叉树的遍历算法和方式自定，前序中序后序皆可，但推荐可以提供多种算法的展示（增加多个按钮，每个按钮对应不同的算法） 当前被遍历到的节点做一个特殊显示（比如不同的颜色） 每隔一段时间（500ms，1s等时间自定）再遍历下一个节点  ` &amp;lt;!DOCTYPE html&amp;gt;">
+<meta name="description" content="**任务描述** 基于任务九，添加节点的选择、增加与删除的功能 点击某个节点元素，则该节点元素呈现一个特殊被选中的样式 增加一个删除按钮，当选中某个节点元素后，点击删除按钮，则将该节点及其所有子节点删除掉 增加一个输入框及一个“添加”按钮当选中某个节点元素后，点击增加按钮，则在该节点下增加一个子节点，节点内容为输入框中内容，插入在其子节点的最后一个位置  之前有好多代码虽然功能实现了，但是比较繁琐">
 <meta name="keywords" content="javascript,百度前端学院">
 <meta property="og:type" content="article">
-<meta property="og:title" content="百度前端技术学院 js任务七:javaScript和树(一)">
-<meta property="og:url" content="http://yoursite.com/2017/07/19/百度前端技术学院-js任务七-javaScript和树-一/index.html">
+<meta property="og:title" content="百度前端技术学院 js任务九:javaScript(三)">
+<meta property="og:url" content="http://yoursite.com/2017/07/23/百度前端技术学院-js任务九-javaScript-三/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="**任务描述** 参考示例图，在页面中展现一颗二叉树的结构 提供一个按钮，显示开始遍历，点击后，以动画的形式呈现遍历的过程 二叉树的遍历算法和方式自定，前序中序后序皆可，但推荐可以提供多种算法的展示（增加多个按钮，每个按钮对应不同的算法） 当前被遍历到的节点做一个特殊显示（比如不同的颜色） 每隔一段时间（500ms，1s等时间自定）再遍历下一个节点  ` &amp;lt;!DOCTYPE html&amp;gt;">
-<meta property="og:updated_time" content="2017-07-19T12:21:04.534Z">
+<meta property="og:description" content="**任务描述** 基于任务九，添加节点的选择、增加与删除的功能 点击某个节点元素，则该节点元素呈现一个特殊被选中的样式 增加一个删除按钮，当选中某个节点元素后，点击删除按钮，则将该节点及其所有子节点删除掉 增加一个输入框及一个“添加”按钮当选中某个节点元素后，点击增加按钮，则在该节点下增加一个子节点，节点内容为输入框中内容，插入在其子节点的最后一个位置  之前有好多代码虽然功能实现了，但是比较繁琐">
+<meta property="og:updated_time" content="2017-07-23T12:02:13.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="百度前端技术学院 js任务七:javaScript和树(一)">
-<meta name="twitter:description" content="**任务描述** 参考示例图，在页面中展现一颗二叉树的结构 提供一个按钮，显示开始遍历，点击后，以动画的形式呈现遍历的过程 二叉树的遍历算法和方式自定，前序中序后序皆可，但推荐可以提供多种算法的展示（增加多个按钮，每个按钮对应不同的算法） 当前被遍历到的节点做一个特殊显示（比如不同的颜色） 每隔一段时间（500ms，1s等时间自定）再遍历下一个节点  ` &amp;lt;!DOCTYPE html&amp;gt;">
+<meta name="twitter:title" content="百度前端技术学院 js任务九:javaScript(三)">
+<meta name="twitter:description" content="**任务描述** 基于任务九，添加节点的选择、增加与删除的功能 点击某个节点元素，则该节点元素呈现一个特殊被选中的样式 增加一个删除按钮，当选中某个节点元素后，点击删除按钮，则将该节点及其所有子节点删除掉 增加一个输入框及一个“添加”按钮当选中某个节点元素后，点击增加按钮，则在该节点下增加一个子节点，节点内容为输入框中内容，插入在其子节点的最后一个位置  之前有好多代码虽然功能实现了，但是比较繁琐">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/19/百度前端技术学院-js任务七-javaScript和树-一/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/23/百度前端技术学院-js任务九-javaScript-三/"/>
 
 
 
 
 
-  <title>百度前端技术学院 js任务七:javaScript和树(一) | 西元前</title>
+  <title>百度前端技术学院 js任务九:javaScript(三) | 西元前</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +277,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/百度前端技术学院-js任务七-javaScript和树-一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/23/百度前端技术学院-js任务九-javaScript-三/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘珠">
@@ -294,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">百度前端技术学院 js任务七:javaScript和树(一)</h1>
+          <h1 class="post-title" itemprop="name headline">百度前端技术学院 js任务九:javaScript(三)</h1>
         
 
         <div class="post-meta">
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-19T20:17:03+08:00">
-                2017-07-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T19:19:36+08:00">
+                2017-07-23
               </time>
             
 
@@ -342,12 +342,12 @@
 
       
         <pre><code>**任务描述**
-参考示例图，在页面中展现一颗二叉树的结构
-提供一个按钮，显示开始遍历，点击后，以动画的形式呈现遍历的过程
-二叉树的遍历算法和方式自定，前序中序后序皆可，但推荐可以提供多种算法的展示（增加多个按钮，每个按钮对应不同的算法）
-当前被遍历到的节点做一个特殊显示（比如不同的颜色）
-每隔一段时间（500ms，1s等时间自定）再遍历下一个节点
+基于任务九，添加节点的选择、增加与删除的功能
+点击某个节点元素，则该节点元素呈现一个特殊被选中的样式
+增加一个删除按钮，当选中某个节点元素后，点击删除按钮，则将该节点及其所有子节点删除掉
+增加一个输入框及一个“添加”按钮当选中某个节点元素后，点击增加按钮，则在该节点下增加一个子节点，节点内容为输入框中内容，插入在其子节点的最后一个位置
 
+之前有好多代码虽然功能实现了，但是比较繁琐，这次已经改进了不少。
 `
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -355,156 +355,265 @@
     &lt;meta charset=&quot;UTF-8&quot;&gt;
     &lt;title&gt;Title&lt;/title&gt;
     &lt;style&gt;
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .box{
+        #root{
             position: relative;
-            top: 50%;
-            left:50%;
+            top: 0;
+            left: 50%;
             transform:translate(-50%);
             width: 50%;
-            height: 150px;
-            border: 2px solid rgba(0,0,0,0.7);
-            margin-top: 20px;
-            /*box-sizing: border-box;*/
+            height: 400px;
+            border: 2px solid #000;
         }
         div{
             display: flex;
+            flex-flow: row wrap;
             justify-content: space-around;
-            align-items:center;
-            width: 45%;
-            height: 75%;
-            border:inherit;
-            margin:0 10px;
-            border-radius:20px;
+            align-items: center;
+            padding: 5px;
+            margin: 5px;
+            font-size: 13px;
+            border: inherit;
+            background: white;
         }
         .btn{
             margin: 20px auto;
-            padding: 8px 0;
-            border: none;
-            background:initial;
+            width: 700px;
         }
-        input{
+        input[type=button]{
             display: inline-block;
-            border:none;
             color: #fff;
-            background: rgba(0,0,0,0.6);
             font-size: 15px;
             font-weight:bolder;
+            background: rgba(0,0,0,0.5);
             padding: 8px 5px;
+            border:none;
             cursor:pointer;
         }
-        input:hover{
+        input[type=text]{
+            padding: 8px 5px;
+            border: 2px solid rgba(0,0,0,0.5);
+        }
+        input[type=button]:hover{
             background: rgba(0,0,0,0.8);
-            color:#fff;
+        }
+        .select{
+            background: pink;
         }
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;div class=&quot;box&quot; id=&quot;root&quot;&gt;
-        &lt;div&gt;
-            &lt;div&gt;
-                &lt;div&gt;&lt;/div&gt;
-                &lt;div&gt;&lt;/div&gt;
+    &lt;div id=&quot;root&quot;&gt;想笑来伪装掉下的眼泪
+        &lt;div&gt;点点头承认自己会怕黑
+            &lt;div&gt;我只求能借一点的时间来陪
+                &lt;div&gt;你却连同情都不给&lt;/div&gt;
+                &lt;div&gt;想哭来试探自己麻痹了没&lt;/div&gt;
             &lt;/div&gt;
-            &lt;div&gt;
-                &lt;div&gt;&lt;/div&gt;
-                &lt;div&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;div&gt;
-                &lt;div&gt;&lt;/div&gt;
-                &lt;div&gt;&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;div&gt;&lt;/div&gt;
-                &lt;div&gt;&lt;/div&gt;
+            &lt;div&gt;全世界好像只有我疲惫
+                &lt;div&gt;无所谓反正难过就敷衍走一回&lt;/div&gt;
+                &lt;div&gt;但愿绝望和无奈远走高飞&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
+        &lt;div&gt;天灰灰会不会让我忘了你是谁
+            &lt;div&gt;夜越黑梦违背难追难回味&lt;/div&gt;
+            &lt;div&gt;我的世界将被摧毁也许事与愿违
+                &lt;div&gt;累不累睡不睡单影无人相依偎&lt;/div&gt;
+                &lt;div&gt;夜越黑梦违背有谁肯安慰&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;　也许颓废也是……
     &lt;/div&gt;
     &lt;div class=&quot;btn&quot;&gt;
         &lt;input type=&quot;button&quot; value=&quot;前序遍历&quot; id=&quot;btn_left&quot;&gt;
-        &lt;input type=&quot;button&quot; value=&quot;中序遍历&quot; id=&quot;btn_center&quot;&gt;
         &lt;input type=&quot;button&quot; value=&quot;后序遍历&quot; id=&quot;btn_right&quot;&gt;
+        &lt;input type=&quot;text&quot; id=&quot;val&quot;&gt;
+        &lt;input type=&quot;button&quot; value=&quot;搜索&quot; id=&quot;inquiry&quot;&gt;
+        &lt;input type=&quot;text&quot; id=&quot;content&quot;&gt;
+        &lt;input type=&quot;button&quot; value=&quot;添加&quot; id=&quot;add&quot;&gt;
+        &lt;input type=&quot;button&quot; value=&quot;删除&quot; id=&quot;remove&quot;&gt;
     &lt;/div&gt;
     &lt;script&gt;
-       var btn_left = document.getElementById(&quot;btn_left&quot;),
-           btn_center = document.getElementById(&quot;btn_center&quot;),
-           btn_right = document.getElementById(&quot;btn_right&quot;),
-           rootNode = document.getElementById(&quot;root&quot;),
-           time = null,
-           arr = [];
-       //复位  每次点击都将之前函数或者表达式停止，并且将所有的颜色设置为原来颜色
-       function reset(){
-           //停止setInterval调用
-           clearInterval(time);
-           var divs = document.getElementsByTagName(&quot;div&quot;);
-           for(var i=0;i&lt;divs.length;i++){
-               divs[i].style.backgroundColor = &quot;white&quot;;
-           }
-       }
-       //二叉树前序遍历算法
-       function preOrder(node){
-           if(!(node==null)){
-               arr.push(node);
-               preOrder(node.firstElementChild);
-               preOrder(node.lastElementChild);
-           }
-       }
-       //使用递归方式实现中序遍历
-       function inOrder(node){
-           if(!(node == null)){
-               inOrder(node.firstElementChild);//先访问左子树
-                arr.push(node);//再访问根节点
-               inOrder(node.lastElementChild);//最后访问右子树
-           }
-       }
-       //后序遍历
-       function postOrder(node){
-           if(!(node == null)){
-               postOrder(node.firstElementChild);
-               postOrder(node.lastElementChild);
+        var btn_left = document.getElementById(&quot;btn_left&quot;),
+            btn_right = document.getElementById(&quot;btn_right&quot;),
+            inquiry = document.getElementById(&quot;inquiry&quot;),
+            add = document.getElementById(&quot;add&quot;),
+            remove = document.getElementById(&quot;remove&quot;),
+            root  = document.getElementById(&quot;root&quot;),
+            arr = [],
+            boole = false,
+            previous,
+            time;
+ //每次点击前调用复原
+        function reset(){
+            var divs = document.getElementsByTagName(&quot;div&quot;);
+            for(var i=0;i&lt;divs.length;i++){
+                divs[i].classList.remove(&quot;select&quot;);
+            }
+            arr=[];
+            if (previous) {
+                previous.style.background = &quot;white&quot;;
+            }
+        }
+
+
+        //前序遍历
+        function preOrder(node){
+            if(!(node==null)){
                 arr.push(node);
-           }
-       }
-      //高亮显示
-       function addColor(){
-           /*因为二叉树三种遍历方法已经按照各自的方法将各个节点遍历一遍并且排好了顺序添加进了数组arr里面,所以只要
-           按照顺序依次添加颜色高亮显示*/
-           var i=0;
-           //给数组中第一个元素背景颜色添加高亮显示
-           arr[i].style.backgroundColor = &quot;greenyellow&quot;;
-           //利用serInterval()方法按照一定时间调用计算表达式来给当前遍历到的元素添加颜色以做特殊显示
-           time = setInterval(function(){
-               i++;
-               if(i&lt;arr.length){
-                   arr[i-1].style.backgroundColor = &quot; white&quot;;
-                   arr[i].style.backgroundColor = &quot;greenyellow&quot;;
-               }else{
-                   clearInterval(time);
-                   arr[i].style.backgroundColor = &quot;white&quot;;
+                preOrder(node.firstElementChild);
+                preOrder(node.lastElementChild);
+            }
+        }
+        //后序遍历
+        function postOrder(node){
+            if(!(node == null)){
+                postOrder(node.firstElementChild);
+                postOrder(node.lastElementChild);
+                arr.push(node);
+            }
+        }
+    //显示遍历过程
+        function addColor(){
+            for(var i=0;i&lt;arr.length;i++){
+                (function(i){
+                    setTimeout(function(){
+                        if(i == arr.length-1){
+                            boole = false;
+                        }
+                        if(previous){
+                            previous.style.backgroundColor = &quot;white&quot;;
+                        }
+                        arr[i].style.backgroundColor = &quot;greenyellow&quot;;
+                        previous = arr[i];
+                    },i*200)
+                })(i)
+            }
+        }
+
+        //查询过程函数函数
+        function quiry(){
+            var i=0,
+                val = document.getElementById(&quot;val&quot;);
+            if(val.value == &quot;&quot;){
+                alert(&quot;请输入查询内容&quot;);
+                boole = false;
+            }else{
+                time = setInterval(function(){
+                    if(i&lt;arr.length){
+                        if(i-1 &gt;-1){
+                            arr[i-1].style.backgroundColor = &quot;white&quot;;
+                        }
+                        arr[i].style.backgroundColor = &quot;greenyellow&quot;;
+                        i++
+                    }else{
+                        boole = false;
+                        arr[i-1].style.backgroundColor = &quot;white&quot;;
+                        clearInterval(time);
+                        show();
+                    }
+                },200)
+            }
+
+        }
+        //查询函数将结果显示
+        function show(){
+            var light = [];
+            var val = document.getElementById(&quot;val&quot;).value;
+            var regexp = eval(&quot;/&quot;+ val +&quot;/g&quot;);
+            for(var i=0;i&lt;arr.length;i++){
+                var text = arr[i].innerText;
+               if(regexp.test(text)){
+                   light.push(i)
                }
-           },500)
-       }
-       //给三个按钮分别添加点击事件
-       btn_left.onclick = function(){
-           reset();
-           preOrder(rootNode);
-           addColor()
-       };
-       btn_center.onclick = function(){
-           reset();
-           inOrder(rootNode);
-           addColor();
-       };
-       btn_right.onclick = function(){
-           reset();
-           postOrder(rootNode);
-           addColor();
-       }
+            }
+            if(light.length&gt;0){
+                alert(&quot;已匹配到&quot; +light.length+&quot;个&quot;);
+                for(var j=0;j&lt;light.length;j++){
+                    var x = light[j];
+                    arr[x].style.backgroundColor = &quot;greenyellow&quot;;
+                }
+            }else{
+                alert(&quot;未匹配到相似元素&quot;)
+            }
+        }
+
+        //添加类名
+
+        btn_left.onclick = function(){
+            if(!boole) {
+                boole = true;
+                    reset();
+                    preOrder(root);
+                    addColor()
+            }
+
+        };
+        btn_right.onclick = function(){
+            if(!boole) {
+                boole = true;
+                reset();
+                postOrder(root);
+                addColor()
+            }
+        };
+//查询
+        inquiry.onclick = function(){
+            clearInterval(time);
+            quiry();
+        };
+
+        //点击添加类名
+        (function(){
+            preOrder(root);
+           for(var i=0;i&lt;arr.length;i++){
+               arr[i].onclick = function(e){
+                   e.stopPropagation();//防止事件冒泡;
+                   for(var i=0;i&lt;arr.length;i++){
+                       arr[i].classList.remove(&quot;select&quot;)
+                   }
+                   this.classList.add(&quot;select&quot;);
+               }
+           }
+        })();
+
+        //删除
+        function del(){
+            preOrder(root);
+            arr.forEach(function(e){
+                var name = e.className;
+                if(name == &quot;select&quot;){
+                  e.remove(this);
+                }
+            })
+        }
+        //调用删除函数
+        remove.onclick = function(){
+            del();
+        }
+
+        //添加
+        function append(){
+            var num = [];
+            var divs = document.getElementsByTagName(&quot;div&quot;);
+            for(var i=0;i&lt;divs.length;i++){
+                if(divs[i].className == &quot;select&quot;){
+                    num.push(i);
+                }
+            }
+            var content = document.getElementById(&quot;content&quot;).value;
+            if(content == &quot;&quot;){
+                alert(&quot;请输入要添加的内容&quot;)
+            }else if(num == 0){
+                alert(&quot;请选择要指定添加内容的区域&quot;)
+            } else{
+                var div = document.createElement(&quot;div&quot;);
+                div.innerHTML = content;
+                var select = document.getElementsByClassName(&quot;select&quot;)[0];
+                select.appendChild(div);
+            }
+
+        }
+        add.onclick = function(){
+            append();
+        }
     &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -553,8 +662,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/17/百度前端技术学院-js任务六-基础javaScript练习/" rel="next" title="百度前端技术学院 js任务六:基础javaScript练习">
-                <i class="fa fa-chevron-left"></i> 百度前端技术学院 js任务六:基础javaScript练习
+              <a href="/2017/07/21/百度前端技术学院-js任务八-javaScript和树-二/" rel="next" title="百度前端技术学院 js任务八:javaScript和树(二)">
+                <i class="fa fa-chevron-left"></i> 百度前端技术学院 js任务八:javaScript和树(二)
               </a>
             
           </div>
@@ -562,10 +671,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/21/百度前端技术学院-js任务八-javaScript和树-二/" rel="prev" title="百度前端技术学院 js任务八:javaScript和树(二)">
-                百度前端技术学院 js任务八:javaScript和树(二) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
