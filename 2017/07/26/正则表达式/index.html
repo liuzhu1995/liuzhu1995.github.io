@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="regexp," />
 
 
 
@@ -93,16 +93,17 @@
 
 
 
-<meta name="description" content="**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料， 也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写 的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间 也写了好些笔记在本子上，现在将它搬上来** **节点信息** childNodes可以获取任意节点的所有子节点集合 通过节点类型nodeType区分的有(ele">
+<meta name="description" content="##正则表达式提供了一种强大的文本搜索和处理方式,缩写为regex或者regexp    “正则表达式”描述在搜索文本正文时要匹配的一个或多个字符串。 该表达式可用作   一个将字符模式与要搜索的字符串相匹配的模板。正则表达式包括普通字符（例如，a 到 z 之间的字母）   和特殊字符（称为“元字符”）。 **在javascript中有两种方式** 一种是用内建构造器RegExp()来创建正则表达">
+<meta name="keywords" content="regexp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="百度前端学院 js任务 笔记(一)">
-<meta property="og:url" content="http://yoursite.com/2017/07/23/百度前端学院-js任务-笔记-一/index.html">
+<meta property="og:title" content="正则表达式简单入门">
+<meta property="og:url" content="http://yoursite.com/2017/07/26/正则表达式/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料， 也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写 的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间 也写了好些笔记在本子上，现在将它搬上来** **节点信息** childNodes可以获取任意节点的所有子节点集合 通过节点类型nodeType区分的有(ele">
-<meta property="og:updated_time" content="2017-07-23T13:58:08.755Z">
+<meta property="og:description" content="##正则表达式提供了一种强大的文本搜索和处理方式,缩写为regex或者regexp    “正则表达式”描述在搜索文本正文时要匹配的一个或多个字符串。 该表达式可用作   一个将字符模式与要搜索的字符串相匹配的模板。正则表达式包括普通字符（例如，a 到 z 之间的字母）   和特殊字符（称为“元字符”）。 **在javascript中有两种方式** 一种是用内建构造器RegExp()来创建正则表达">
+<meta property="og:updated_time" content="2017-07-26T09:34:22.980Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="百度前端学院 js任务 笔记(一)">
-<meta name="twitter:description" content="**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料， 也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写 的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间 也写了好些笔记在本子上，现在将它搬上来** **节点信息** childNodes可以获取任意节点的所有子节点集合 通过节点类型nodeType区分的有(ele">
+<meta name="twitter:title" content="正则表达式简单入门">
+<meta name="twitter:description" content="##正则表达式提供了一种强大的文本搜索和处理方式,缩写为regex或者regexp    “正则表达式”描述在搜索文本正文时要匹配的一个或多个字符串。 该表达式可用作   一个将字符模式与要搜索的字符串相匹配的模板。正则表达式包括普通字符（例如，a 到 z 之间的字母）   和特殊字符（称为“元字符”）。 **在javascript中有两种方式** 一种是用内建构造器RegExp()来创建正则表达">
 
 
 
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/23/百度前端学院-js任务-笔记-一/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/26/正则表达式/"/>
 
 
 
 
 
-  <title>百度前端学院 js任务 笔记(一) | 西元前</title>
+  <title>正则表达式简单入门 | 西元前</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +257,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/23/百度前端学院-js任务-笔记-一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/正则表达式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘珠">
@@ -273,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">百度前端学院 js任务 笔记(一)</h1>
+          <h1 class="post-title" itemprop="name headline">正则表达式简单入门</h1>
         
 
         <div class="post-meta">
@@ -285,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T20:21:38+08:00">
-                2017-07-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T12:11:12+08:00">
+                2017-07-26
               </time>
             
 
@@ -320,47 +321,127 @@
       
 
       
-        <pre><code>**在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，
-也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写
-的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间
-也写了好些笔记在本子上，现在将它搬上来**
-**节点信息**
-childNodes可以获取任意节点的所有子节点集合
-通过节点类型nodeType区分的有(element元素节点(1,节点类型)，attr属性节点(2),text文本节点(3),
-comments注释(8),document(9))
-element是node多种类型的其中一种，当nodeType == 1 时就是元素节点，它拥有id,class,children等属性。
-</code></pre><p>   <strong>subString(a,b)</strong><br>   用于提取字符串中介于两个指定下标之间的字符,它有两个参数,都是非负的证书,第一个要提取的字符串<br>   的第一个字符,第二个可选,如果省略返回的字符串一直到字符串的结尾。</p>
-<pre><code>**innerHTML和innerText**
-innerHTML 设置或返回指定元素开始标签与结束标签中的所有元素(自己和所有子元素)内容，包括标签元素。
-innerText 设置或者返回指定元素开始标签与结束标签中的所有(自己和所有子元素)文本内容。
+        <pre><code>##正则表达式提供了一种强大的文本搜索和处理方式,缩写为regex或者regexp
+</code></pre><p>   “正则表达式”描述在搜索文本正文时要匹配的一个或多个字符串。 该表达式可用作<br>   一个将字符模式与要搜索的字符串相匹配的模板。正则表达式包括普通字符（例如，a 到 z 之间的字母）<br>   和特殊字符（称为“元字符”）。</p>
+<pre><code>**在javascript中有两种方式**
+一种是用内建构造器RegExp()来创建正则表达式对象
+例如：var a = new RegExp(&quot;j.*t&quot;);
+一种是更为简便的正则文本标记法：var a = /j.*t/;
+以上示例中  j.*t 就是正则表达式模式,该含义就是&quot;匹配任何以j开头以t结尾的字符串,
+这两个字符之间可以包含一个或者多个字符&quot;，*意思就是&quot;一个或者多个单元&quot;，
+.代表任意字符。
+**注意在向RegExp构造器传递模式时，必须放在一对引号中**
 
-**push()**
-向数组末尾添加一个或者多个元素，并且返回新长度。
-最常用就是创建一个新数组var arr = []，在遍历的时候，将符合if条件的元素或者任意属性
-添加到arr里面(arr.push());
+##RegExp对象的属性
+**正则表达式拥有五个属性**
+global:只读属性，不填写默认值为false，相关搜索在匹配到第一个就会停止搜索，如果要找出所有匹配的就将其值设置为true(填写它的简写 g)。
+ignoreCase:只读属性，设置大小写相关性，默认为false(填写它的简写 i 就修改为true)
+multiline:只读属性，设置是否跨行搜索，默认值围false(填写它的简写 m 就修改为true)
+lastIndex:返回字符串中下一个匹配串的开始位置，该方法只有在test()和exec()成功匹配之后，并且global修饰符被设定时才有效
+source:只读属性，返回该正则表达式的模式(不包含修饰符)
+**注意除了lastIndex外，上面所有属性在对象创建后就不能在修改**
+##使用方法：
+var a = new RegExp(&quot;j.*t&quot;,&quot;gim&quot;);
+var a = /j.*t/gim;
 
-**insetBefore()**
-将一个新元素插入到一个现有元素的前面。
-parentElement.insetBefore(new.Element,targetElement)
-parentElement就是targetElement.parent
+##Regexp对象的方法
+有两种可用于查找匹配内容的方法 test()和exec()
+这两种方法参数都是一个字符串，test()返回的是布尔值(找到时为true,否则为false)，
+exec()返回的是由匹配到的字符串组成的数组。
+例： test()  /j.*t/.test(&quot;Javascript&quot;) 返回false
+    /j.*t/i.test(&quot;Javascript&quot;) 返回true 因为添加了忽视大小写的的i修饰符
+    exec() /j.*t/.exec(&quot;Javascript&quot;) 访问它返回数组的首元素  结果&quot;Javascript&quot;
 
-**removeChild()**
-fatherObj.removeChild(childrenObj)
-fatherObj要删除元素的元素对象，childrenObj要被删除的子元素对象
+##以正则表达式为参数的方法
+String对象为我们提供了这些方法，在String中，以正则表达式对象围参数的方法有以下几种：
+var a = new String(&quot;OxfordUniversityPress&quot;)
 
-**childNodes和children**
-</code></pre><p>   childNodes返回节点的子元素集合，包括HTML节点，所有属性，文本节点。<br>   可以通过nodeType来判断是哪种类型的节点，只有当nodeType==1时才是元素节点，2是属性节点，3是文本节点。<br>   children它返回指定元素的子元素集合。但它只返回HTML节点，甚至不返回文本节点</p>
-<p>   <strong>split()和join()</strong><br>   split()用于把一个字符串分割成字符串数组 有两个参数，第一个必须 字符串或正则表达式 第二个可选返回数组的最大长度<br>   join()将一个数组合并成字符串</p>
-<p>   <strong>replace()</strong><br>   用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式相匹配的子串。<br>   stringObject.replace(regexp/substr,replacement)<br>   regexp/substr 必须，规定字符串或需要替换的模式的regexp<br>   replacement 必须，一个字符串值，替换文本或者生成替换文本的函数</p>
-<p>   <strong>eval()</strong><br>   可以用这个生成正则 例如  eval(“/“+ x +”/g”) x任意字符  用来匹配所有符合x值的字符串</p>
-<p>   <strong>foeEach()</strong><br>   遍历循环 for的简化和for()循环的效果一样<br>   例如：var a = [,9,2,3,7,5,6];<br>    a.forEach(function(e){<br>            alert(e);<br>        }) 会依次弹出数组里面的值</p>
-<pre><code>**阻止事件冒泡**
-    e.stopPropagation()
+match():返回一个包含匹配内容的数组
+a.match(/s/); [&quot;s&quot;]  a.match(/s/g); [&quot;s&quot;,&quot;s&quot;,&quot;s&quot;]   a.match(/o.*u/gi); [&quot;OxfordU&quot;]
 
-**classList属性**
- 返回元素的类名，可以用来增加或者删除指定的类名，它会自行判断这个类是否存在
- 添加:element.classList.add();
- 删除:element.classList.remove()
+search():返回第一个匹配内容所在守字符的索引位置
+a.search(/s.*y/g);  12
+
+replace():将相关的匹配文本替换成某些其它字符串
+将所有的大写字母替换成空字符串
+var a = new String(&quot;OxfordUniversityPress&quot;); a.replace(/[A-Z]/g,&quot; &quot;);
+&quot; xford niversity ress&quot;
+将所有大写字母替换成下划线
+var a = new String(&quot;OxfordUniversityPress&quot;); a.replace(/[A-Z]/g,&quot;_&quot;);
+&quot;_xford_niversity_ress&quot;
+给所有大写字幕前加下划线
+var a = new String(&quot;OxfordUniversityPress&quot;); a.replace(/[A-Z]/g,&quot;_$&amp;&quot;);
+&quot;_Oxford_University_Press&quot;
+
+##正则表达式的匹配模式
+1.[abc]  匹配字符类信息
+ I love you&quot;.match(/[oyu]/g);
+ [&quot;o&quot;, &quot;y&quot;, &quot;o&quot;, &quot;u&quot;]
+
+2.[a-z] 匹配某以恶区间内的字符信息，例如[a-d]相当于[abcd],[a-z]表示匹配所有小写字母
+[a-zA-Z]匹配所有的大小写字母，[a-zA-Z0-9_]匹配所有的大小写字母 数字 以及下划线
+ &quot;I love you&quot;.match(/[a-z]/g);
+ [&quot;l&quot;, &quot;o&quot;, &quot;v&quot;, &quot;e&quot;, &quot;y&quot;, &quot;o&quot;, &quot;u&quot;]
+ &quot;I love you&quot;.match(/[a-zA-Z]/g);
+ [&quot;I&quot;, &quot;l&quot;, &quot;o&quot;, &quot;v&quot;, &quot;e&quot;, &quot;y&quot;, &quot;o&quot;, &quot;u&quot;]
+
+ 3.[^abc] 匹配所有不属于表达式限定范围内的字符
+ _Oxford_University_Press&quot;.match(/[^a-z]/g);
+ [&quot;_&quot;, &quot;O&quot;, &quot;_&quot;, &quot;U&quot;, &quot;_&quot;, &quot;P&quot;]
+
+ 4.a|b 匹配a或b |或者的意思，该符号可在同一表达式中多次使用
+
+ 5.a(?=b) 匹配所有后面跟着b的信息
+    a(?!b) 匹配术语后面不跟着b的信息
+
+ 6.\ 帮助我们匹配一些模式文本中的特殊字符
+ &quot;R2-D2&quot;.match(/[2-3]/g);
+  [&quot;2&quot;, &quot;2&quot;]
+  &quot;R2-D2&quot;.match(/[2\-3]/g);
+  [&quot;2&quot;, &quot;-&quot;, &quot;2&quot;]
+
+  7.\n 换行符  \r 回车符  \f 换页符 \t 横向制表符 \v 纵向制表符
+
+  8.\s 匹配空白符，页包括上面五个转义字符
+
+  9.\S 匹配除空白符以外的所有内容 相当于[^\s]
+
+  10.\w 匹配所有的字母 下划线 数字 相当于[A-Za-z0-9]
+
+  11.\W 匹配的与\w相反
+
+  12.\d 匹配所有的数字信息 相当于[0-9]
+
+  13.\D 与\d相反匹配非数字信息 相当于[^0-9] 或 [^/d]
+
+  14.\0 匹配null值
+
+  15.^匹配字符串开头部分 如果设置了多行修饰就是匹配每一行的开头
+
+  16.$ 匹配输入消息的末尾部分  如果设置了多行修饰就是匹配每一行的末尾
+
+  17. . 匹配除了新行符和换行符以外的任何字符
+
+  18. * 匹配的是模式中间出现0次或者多次的内容，例如/.*/可以匹配任何内容(包括空串)
+
+  19. ？ 匹配的是模式中间出现0次或者1次的内容
+
+  20. + 匹配的是模式中间出现1次或者多次的内容
+
+  21. {n} 匹配的是模式中间出现n次的内容
+
+  22. {min,max} 匹配的是在模式中出现次数min到max之间的信息，如果省略了max 就意味着
+  没有最多次数，只有最少次数。但是min不能省略
+
+  23.(pattern) 当某个皮欸模式被放在括号的时候，就表明匹配该模式的匹配串是可替换的，
+  因此它也被称为捕获模式，这些捕获的匹配串可以分别用$1,$2,$3...$9等参数来表示
+  例如将匹配串中所有的c都重复两次
+  &quot;copyfing any classified&quot;.replace(/(c)/g,&quot;$1$1$1&quot;);
+  &quot;cccopying any ccclassified&quot;
+
+ 或者将所有的 fi 替换成 if
+ &quot;copyfing any classified&quot;.replace(/(f)(i)/g,&quot;$2$1&quot;);
+ &quot;copyifng any classiifed&quot;
 </code></pre>
       
     </div>
@@ -388,6 +469,12 @@ fatherObj要删除元素的元素对象，childrenObj要被删除的子元素对
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/regexp/" rel="tag"># regexp</a>
+          
+        </div>
+      
 
       
       
@@ -397,8 +484,8 @@ fatherObj要删除元素的元素对象，childrenObj要被删除的子元素对
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/23/百度前端技术学院-js任务九-javaScript-三/" rel="next" title="百度前端技术学院 js任务九:javaScript(三)">
-                <i class="fa fa-chevron-left"></i> 百度前端技术学院 js任务九:javaScript(三)
+              <a href="/2017/07/25/正则的一些常用表达式/" rel="next" title="正则的一些常用表达式">
+                <i class="fa fa-chevron-left"></i> 正则的一些常用表达式
               </a>
             
           </div>
@@ -406,10 +493,6 @@ fatherObj要删除元素的元素对象，childrenObj要被删除的子元素对
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/24/百度前端学院js综合练习-任务一-表单-一-单个表单项的检验/" rel="prev" title="百度前端学院js综合练习 任务一:表单(一)单个表单项的检验">
-                百度前端学院js综合练习 任务一:表单(一)单个表单项的检验 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
