@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="**任务描述** 如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后， 对输入框中内容进行格式校验，并在其下方显示校验结果 校验规则： 1.字符数为4~16位 2.每个英文字母、数字、英文符号长度为1 3.每个汉字，中文符号长度为2  ` &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt;     &amp;">
+<meta name="description" content="任务描述如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，对输入框中内容进行格式校验，并在其下方显示校验结果校验规则：1.字符数为4~16位2.每个英文字母、数字、英文符号长度为13.每个汉字，中文符号长度为2我的实现详细代码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="百度前端学院js综合练习 任务一:表单(一)单个表单项的检验">
 <meta property="og:url" content="http://yoursite.com/2017/07/24/百度前端学院js综合练习-任务一-表单-一-单个表单项的检验/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="**任务描述** 如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后， 对输入框中内容进行格式校验，并在其下方显示校验结果 校验规则： 1.字符数为4~16位 2.每个英文字母、数字、英文符号长度为1 3.每个汉字，中文符号长度为2  ` &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt;     &amp;">
-<meta property="og:updated_time" content="2017-07-24T06:26:08.794Z">
+<meta property="og:description" content="任务描述如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，对输入框中内容进行格式校验，并在其下方显示校验结果校验规则：1.字符数为4~16位2.每个英文字母、数字、英文符号长度为13.每个汉字，中文符号长度为2我的实现详细代码">
+<meta property="og:updated_time" content="2017-08-02T08:19:25.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="百度前端学院js综合练习 任务一:表单(一)单个表单项的检验">
-<meta name="twitter:description" content="**任务描述** 如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后， 对输入框中内容进行格式校验，并在其下方显示校验结果 校验规则： 1.字符数为4~16位 2.每个英文字母、数字、英文符号长度为1 3.每个汉字，中文符号长度为2  ` &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt;     &amp;">
+<meta name="twitter:description" content="任务描述如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，对输入框中内容进行格式校验，并在其下方显示校验结果校验规则：1.字符数为4~16位2.每个英文字母、数字、英文符号长度为13.每个汉字，中文符号长度为2我的实现详细代码">
 
 
 
@@ -320,120 +320,8 @@
       
 
       
-        <pre><code>**任务描述**
-如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，
-对输入框中内容进行格式校验，并在其下方显示校验结果
-校验规则：
-1.字符数为4~16位
-2.每个英文字母、数字、英文符号长度为1
-3.每个汉字，中文符号长度为2
+        <p><strong>任务描述</strong><br>如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，<br>对输入框中内容进行格式校验，并在其下方显示校验结果<br>校验规则：<br>1.字符数为4~16位<br>2.每个英文字母、数字、英文符号长度为1<br>3.每个汉字，中文符号长度为2<br><a href="http://htmlpreview.github.io/?https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E8%A1%A8%E5%8D%95%EF%BC%88%E4%B8%80%EF%BC%89%E5%8D%95%E4%B8%AA%E8%A1%A8%E5%8D%95%E9%A1%B9%E7%9A%84%E6%A3%80%E9%AA%8C/1.html" target="_blank" rel="external">我的实现</a><br><a href="https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E8%A1%A8%E5%8D%95%EF%BC%88%E4%B8%80%EF%BC%89%E5%8D%95%E4%B8%AA%E8%A1%A8%E5%8D%95%E9%A1%B9%E7%9A%84%E6%A3%80%E9%AA%8C/1.html" target="_blank" rel="external">详细代码</a></p>
 
-`
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Title&lt;/title&gt;
-    &lt;style&gt;
-        .wrap{
-            margin:100px auto;
-            width: 300px;
-            height: 250px;
-        }
-        input[type=password], input[type=text],input[type=button]{
-            width: 298px;
-            height: 47px;
-            font-size: 14px;
-            text-indent:1em;
-            border: 1px solid rgba(200,200,200,0.5);
-            border-radius: 5px;
-            outline: none;
-            margin-top:5px;
-        }
-        input[type=button]{
-            width: 300px;
-            text-indent:0;
-            background: rgba(0,0,0,0.4);
-            border:none;
-            margin-top:10px;
-            cursor:pointer;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form action=&quot;&quot;&gt;
-        &lt;div class=&quot;wrap&quot;&gt;
-                &lt;input type=&quot;text&quot; placeholder=&quot;名称&quot; id=&quot;name&quot;&gt;
-                &lt;input type=&quot;text&quot; placeholder=&quot;电话&quot; id=&quot;number&quot;&gt;
-                &lt;input type=&quot;password&quot; placeholder=&quot;密码&quot; id=&quot;password&quot;&gt;
-                &lt;input type=&quot;button&quot; value=&quot;提交注册&quot; id=&quot;submit&quot;&gt;
-        &lt;/div&gt;
-    &lt;/form&gt;
-    &lt;script&gt;
-        var submit = document.getElementById(&quot;submit&quot;);
-        submit.onclick = function(){
-            len_name();
-            num();
-            pass()
-        }
-
-        //判断名称长度
-        function len_name() {
-            var name = document.getElementById(&quot;name&quot;);
-            var name_val = name.value;
-            var len = 0;
-            for (var i = 0; i &lt; name_val.length; i++) {
-                var a = name_val.charAt(i);
-                if ((/[^\x00-\xff]/ig).test(a)) {
-                    len += 2;
-                } else {
-                    len += 1;
-                }
-            }
-                if (len &lt; 4 || len &gt; 16) {
-                    name.value = &quot;&quot;;
-                    name.style.border = &quot;1px solid red&quot;;
-                    name.setAttribute(&quot;placeholder&quot;, &quot;字符数为4~16个字符&quot;);
-                } else {
-                    name.style.border = &quot;1px solid green&quot;;
-                }
-        }
-        //判断电话号码
-        function num(){
-            var number = document.getElementById(&quot;number&quot;);
-            var num_val = number.value;
-            if(!isNaN(num_val)){
-                if(num_val.length == 11){
-                    number.style.border= &quot;1px solid green&quot;;
-                }else{
-                    number.value = &quot;&quot;;
-                    number.style.border= &quot;1px solid red&quot;;
-                    number.setAttribute(&quot;placeholder&quot;,&quot;请输入11位正确电话号码&quot;)
-                }
-            }else{
-                number.value = &quot;&quot;;
-                number.style.border= &quot;1px solid red&quot;;
-                number.setAttribute(&quot;placeholder&quot;,&quot;请输入11位正确电话号码&quot;)
-            }
-        }
-        //判断密码长度
-        function pass(){
-            var password = document.getElementById(&quot;password&quot;);
-            var pass_val = password.value;
-            if(pass_val.length&lt;7 ||pass_val&gt;16){
-                password.style.border= &quot;1px solid red&quot;;
-                pass.setAttribute(&quot;placeholder&quot;,&quot;请输入密码&quot;)
-            }else{
-                password.style.border= &quot;1px solid green&quot;;
-            }
-
-        }
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-`
-</code></pre>
       
     </div>
 
