@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/17/百度前端技术学院-js任务六-基础javaScript练习/index.html">
 <meta property="og:site_name" content="西元前">
 <meta property="og:description" content="**任务描述** 基于任务四进行升级 将新元素输入框从input改为textarea 允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔 增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查">
-<meta property="og:updated_time" content="2017-07-17T11:39:01.704Z">
+<meta property="og:updated_time" content="2017-08-02T07:32:31.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="百度前端技术学院 js任务六:基础javaScript练习">
 <meta name="twitter:description" content="**任务描述** 基于任务四进行升级 将新元素输入框从input改为textarea 允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔 增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查">
@@ -326,128 +326,8 @@
 将新元素输入框从input改为textarea
 允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔
 增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查询词为ab或bc，则该内容需要标识
-`
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Title&lt;/title&gt;
-    &lt;style&gt;
-        li{
-            float: left;
-            height: 30px;
-            line-height:30px;
-            text-align: center;
-            background: greenyellow;
-            list-style:none;
-            margin-left: 4px;
-            padding:0 10px;
-            color: #fff;
-            cursor: pointer;
-        }
-        .add{
-            color: purple;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;textarea name=&quot;&quot; id=&quot;content&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;&lt;br&gt;
-    &lt;input type=&quot;button&quot; id=&quot;left_in&quot; value=&quot;左侧插入&quot;&gt;
-    &lt;input type=&quot;button&quot; id=&quot;right_in&quot; value=&quot;右侧插入&quot;&gt;
-    &lt;input type=&quot;button&quot; id=&quot;left_out&quot; value=&quot;左侧删除&quot;&gt;
-    &lt;input type=&quot;button&quot; id=&quot;right_out&quot; value=&quot;右侧删除&quot;&gt;
-    &lt;input type=&quot;text&quot; id=&quot;input&quot;&gt;
-    &lt;input type=&quot;button&quot; id=&quot;inquiry&quot; value=&quot;查询&quot;&gt;
-    &lt;ul id=&quot;show&quot;&gt;&lt;/ul&gt;
-    &lt;script&gt;
-        var left_in = document.getElementById(&quot;left_in&quot;);
-        var right_in = document.getElementById(&quot;right_in&quot;);
-        var left_out = document.getElementById(&quot;left_out&quot;);
-        var right_out = document.getElementById(&quot;right_out&quot;);
-        var content = document.getElementById(&apos;content&apos;);
-        var inquiry = document.getElementById(&apos;inquiry&apos;);
-        var show = document.getElementById(&apos;show&apos;);
-        var lis = show.childNodes;
+</code></pre><p><a href="http://htmlpreview.github.io/?https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1(%E5%85%AD" target="_blank" rel="external">我的实现</a>%EF%BC%9A%E5%9F%BA%E7%A1%80JavaScript%E7%BB%83%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/6.html)<br><a href="https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1(%E5%85%AD" target="_blank" rel="external">详细代码</a>%EF%BC%9A%E5%9F%BA%E7%A1%80JavaScript%E7%BB%83%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/6.html)</p>
 
-
-        //左右添加
-       function add(direction){
-           if(content.value == &quot;&quot;){
-               alert(&quot;该文本不能为空！&quot;);
-               content.value = &quot;&quot;
-           }else{
-               var text = content.value;
-               //将多个空格替换为一个空格
-               text = text.replace(/\s+/g,&apos; &apos;);
-               //将非数字，字母，汉字的其它字符串替换为一个空格
-               text = text.replace(/[^a-zA-Z0-9\u4e00-\u9fa5]/g,&apos; &apos;);
-               //从空格处将字符串分割成字符串组
-               var arr = text.split(&apos; &apos;);
-               //遍历字符串组,将数组值按下标值依次插入到ul当中
-               for(var i=0;i&lt;arr.length;i++){
-                   var li= document.createElement(&apos;li&apos;);
-                   li.innerHTML = arr[i];
-                   if(direction === &quot;left&quot;){
-                       show.insertBefore(li,show.firstChild);
-                       content.value = &quot;&quot;;
-                       content.focus();
-                   }else if(direction === &quot;right&quot;){
-                       show.appendChild(li);
-                       content.value = &quot;&quot;;
-                       content.focus();
-                   }
-               }
-           }
-
-        }
-        left_in.onclick=function(){add(&quot;left&quot;)};
-        right_in.onclick=function(){add(&quot;right&quot;)};
-
-        //左右删除
-        function remove(x,direction){
-            if(direction === &quot;left&quot;){
-                alert(&quot;删除数字:&quot;+show.firstChild.innerText);
-                show.removeChild(show.firstChild);
-                left.focus();
-            }else if(direction === &quot;right&quot;){
-                alert(&quot;删除数字:&quot;+show.lastChild.innerText);
-                show.removeChild(show.lastChild);
-                right_out.focus();
-            }else{
-                alert(&apos;删除数字:&apos;+show.removeChild(x).innerText);
-            }
-        }
-
-        left_out.onclick = function(){remove(1,&quot;left&quot;)};
-        right_out.onclick = function(){remove(1,&quot;right&quot;)};
-        show.onclick = function(){remove(event.target)};
-        //查询
-        inquiry.onclick = function(){
-            //获取文本框输入的值
-            var val =  document.getElementById(&apos;input&apos;).value;
-            //将获取的文本框值，转换为正则表达式
-            /*var reg = &quot;/&quot;+val+&quot;/g&quot;;
-            var tent = eval(reg);*/
-            var tent = eval(&quot;/&quot;+ val +&quot;/g&quot;);
-            //遍历所有ul的子节点集合lis
-            for(var i=0;i&lt;lis.length;i++){
-                //获取当前li节点的内容，因为innerHTML返回的就是string类型值，所以不需要用toString()进行转换
-                var str = show.childNodes[i].innerHTML;
-                //在当前字符串str中查找与所有tent正则相匹配的子串，并用span将其替换
-                str = str.replace(tent,&quot;&lt;span class=&apos;add&apos;&gt;&quot;+val+&quot;&lt;/span&gt;&quot; );
-                //将当前li元素的内容替换为已修改的内容值
-                show.childNodes[i].innerHTML = str;
-                //每次点击后将文本框值清零
-                input.value=&quot;&quot;;
-                //输入焦点添加给文本框
-                input.focus();
-            }
-        }
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-`
-</code></pre>
       
     </div>
 
