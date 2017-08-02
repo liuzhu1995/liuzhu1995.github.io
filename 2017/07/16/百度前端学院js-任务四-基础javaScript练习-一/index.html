@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="**任务描述** 如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空 有一个input输入框，以及4个操作按钮  点击&amp;quot;左侧入&amp;quot;，将input中输入的数字从左侧插入队列中； 点击&amp;quot;右侧入&amp;quot;，将input中输入的数字从右侧插入队列中； 点击&amp;quot;左侧出&amp;quot;，读取并删除队列左侧第一个元素，并弹窗显示元素中数值； 点击&amp;quot;右侧出&amp;qu">
+<meta name="description" content="任务描述如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空有一个input输入框，以及4个操作按钮点击”左侧入”，将input中输入的数字从左侧插入队列中；点击”右侧入”，将input中输入的数字从右侧插入队列中；点击”左侧出”，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；点击”右侧出”，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；点击队列中任何一个元素，则该元素会被从队列">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="百度前端学院js 任务四:基础javaScript练习(一)">
 <meta property="og:url" content="http://yoursite.com/2017/07/16/百度前端学院js-任务四-基础javaScript练习-一/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="**任务描述** 如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空 有一个input输入框，以及4个操作按钮  点击&amp;quot;左侧入&amp;quot;，将input中输入的数字从左侧插入队列中； 点击&amp;quot;右侧入&amp;quot;，将input中输入的数字从右侧插入队列中； 点击&amp;quot;左侧出&amp;quot;，读取并删除队列左侧第一个元素，并弹窗显示元素中数值； 点击&amp;quot;右侧出&amp;qu">
-<meta property="og:updated_time" content="2017-07-16T03:29:30.269Z">
+<meta property="og:description" content="任务描述如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空有一个input输入框，以及4个操作按钮点击”左侧入”，将input中输入的数字从左侧插入队列中；点击”右侧入”，将input中输入的数字从右侧插入队列中；点击”左侧出”，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；点击”右侧出”，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；点击队列中任何一个元素，则该元素会被从队列">
+<meta property="og:updated_time" content="2017-08-02T07:07:27.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="百度前端学院js 任务四:基础javaScript练习(一)">
-<meta name="twitter:description" content="**任务描述** 如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空 有一个input输入框，以及4个操作按钮  点击&amp;quot;左侧入&amp;quot;，将input中输入的数字从左侧插入队列中； 点击&amp;quot;右侧入&amp;quot;，将input中输入的数字从右侧插入队列中； 点击&amp;quot;左侧出&amp;quot;，读取并删除队列左侧第一个元素，并弹窗显示元素中数值； 点击&amp;quot;右侧出&amp;qu">
+<meta name="twitter:description" content="任务描述如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空有一个input输入框，以及4个操作按钮点击”左侧入”，将input中输入的数字从左侧插入队列中；点击”右侧入”，将input中输入的数字从右侧插入队列中；点击”左侧出”，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；点击”右侧出”，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；点击队列中任何一个元素，则该元素会被从队列">
 
 
 
@@ -321,95 +321,12 @@
       
 
       
-        <pre><code>**任务描述**
-如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空
-有一个input输入框，以及4个操作按钮
+        <p><strong>任务描述</strong><br>如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空<br>有一个input输入框，以及4个操作按钮<br>点击”左侧入”，将input中输入的数字从左侧插入队列中；<br>点击”右侧入”，将input中输入的数字从右侧插入队列中；<br>点击”左侧出”，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；<br>点击”右侧出”，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；<br>点击队列中任何一个元素，则该元素会被从队列中删除</p>
+<p><a href="">我的实现</a><br>具体代码如下<br>`<br>&lt;!DOCTYPE html&gt;</p>
+<p><html lang="en"></html></p>
+<p><head><br>    <meta charset="UTF-8"><br>    <title>Title</title><br>    <style><br>        li{<br>            display: inline-block;<br>            background: greenyellow;<br>            padding:0 6px;<br>            height: 30px;<br>            text-align: center;<br>            margin-left: 4px;<br>            cursor: pointer;<br>        }<br>    </style><br></head></p>
+<p><body><br>    <input id="num" type="text"><br>    <button id="left_in">左侧入</button><br>    <button id="right_in">右侧入</button><br>    <button id="left_out">左侧出</button><br>    <button id="right_out">右侧出</button><br>    <ul id="num_wrap"><br>    </ul><br>    <script><br>    var number = document.getElementById(‘num’);<br>    var left_in = document.getElementById(‘left_in’);<br>        var right_in = document.getElementById(‘right_in’);<br>        var left_out = document.getElementById(‘left_out’);<br>        var right_out = document.getElementById(‘right_out’);<br>        var num_wrap = document.getElementById(‘num_wrap’);<br>        function insert(direction){<br>            if(number.value == ‘’){<br>                alert(‘请输入数字’);<br>                number.value = ‘’;<br>                number.focus();<br>            }else if(isNaN(number.value)){<br>                alert(‘只能输入数字’);<br>                number.value = ‘’;<br>                number.focus();<br>            }else{<br>                var li = document.createElement(‘li’);<br>                li.innerHTML = number.value;<br>                number.value=’’;<br>                number.focus();<br>                if(direction === ‘left’){<br>                    num_wrap.insertBefore(li,num_wrap.firstChild);<br>                }else if(direction === ‘right’){<br>                    num_wrap.appendChild(li);<br>                    number.value=’’;<br>                    number.focus();<br>                }<br>            }<br>        }<br>        function remove(x,direction){<br>             if( direction === ‘left’){<br>                alert(‘删除数字:’+ num_wrap.firstChild.innerText );<br>                num_wrap.removeChild(num_wrap.firstChild);<br>            }else if(direction === ‘right’){<br>                alert(‘删除数字:’ + num_wrap.lastChild.innerText);<br>                num_wrap.removeChild(num_wrap.lastChild);<br>            }else{<br>                alert(‘删除数字:’ + num_wrap.removeChild(x).innerText);<br>            }<br>        }<br>        left_in.onclick = function(){insert(‘left’);};<br>        right_in.onclick = function(){insert(‘right’);};<br>        left_out.onclick = function (){remove(1,’left’);};<br>        right_out.onclick=function(){remove(1,’right’);};<br>        num_wrap.onclick= function(){remove(event.target)};<br>    </script><br></body><br><br>`</p>
 
-点击&quot;左侧入&quot;，将input中输入的数字从左侧插入队列中；
-点击&quot;右侧入&quot;，将input中输入的数字从右侧插入队列中；
-点击&quot;左侧出&quot;，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；
-点击&quot;右侧出&quot;，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；
-点击队列中任何一个元素，则该元素会被从队列中删除
-`
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Title&lt;/title&gt;
-    &lt;style&gt;
-        li{
-            display: inline-block;
-            background: greenyellow;
-            padding:0 6px;
-            height: 30px;
-            text-align: center;
-            margin-left: 4px;
-            cursor: pointer;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;input id=&quot;num&quot; type=&quot;text&quot; /&gt;
-    &lt;button id=&quot;left_in&quot;&gt;左侧入&lt;/button&gt;
-    &lt;button id=&quot;right_in&quot;&gt;右侧入&lt;/button&gt;
-    &lt;button id=&quot;left_out&quot;&gt;左侧出&lt;/button&gt;
-    &lt;button id=&quot;right_out&quot;&gt;右侧出&lt;/button&gt;
-
-    &lt;ul id=&quot;num_wrap&quot;&gt;
-
-    &lt;/ul&gt;
-    &lt;script&gt;
-        var number = document.getElementById(&apos;num&apos;);
-        var left_in = document.getElementById(&apos;left_in&apos;);
-        var right_in = document.getElementById(&apos;right_in&apos;);
-        var left_out = document.getElementById(&apos;left_out&apos;);
-        var right_out = document.getElementById(&apos;right_out&apos;);
-        var num_wrap = document.getElementById(&apos;num_wrap&apos;);
-        function insert(direction){
-            if(number.value == &apos;&apos;){
-                alert(&apos;请输入数字&apos;);
-                number.value = &apos;&apos;;
-                number.focus();
-            }else if(isNaN(number.value)){
-                alert(&apos;只能输入数字&apos;);
-                number.value = &apos;&apos;;
-                number.focus();
-            }else{
-                var li = document.createElement(&apos;li&apos;);
-                li.innerHTML = number.value;
-                number.value=&apos;&apos;;
-                number.focus();
-                if(direction === &apos;left&apos;){
-                    num_wrap.insertBefore(li,num_wrap.firstChild);
-                }else if(direction === &apos;right&apos;){
-                    num_wrap.appendChild(li);
-                    number.value=&apos;&apos;;
-                    number.focus();
-                }
-            }
-        }
-        function remove(x,direction){
-             if( direction === &apos;left&apos;){
-                alert(&apos;删除数字:&apos;+ num_wrap.firstChild.innerText );
-                num_wrap.removeChild(num_wrap.firstChild);
-            }else if(direction === &apos;right&apos;){
-                alert(&apos;删除数字:&apos; + num_wrap.lastChild.innerText);
-                num_wrap.removeChild(num_wrap.lastChild);
-            }else{
-                alert(&apos;删除数字:&apos; + num_wrap.removeChild(x).innerText);
-            }
-        }
-
-        left_in.onclick = function(){insert(&apos;left&apos;);};
-        right_in.onclick = function(){insert(&apos;right&apos;);};
-        left_out.onclick = function (){remove(1,&apos;left&apos;);};
-        right_out.onclick=function(){remove(1,&apos;right&apos;);};
-        num_wrap.onclick= function(){remove(event.target)};
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-`
-</code></pre>
       
     </div>
 
@@ -526,7 +443,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

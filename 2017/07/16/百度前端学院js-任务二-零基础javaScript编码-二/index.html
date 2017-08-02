@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="**任务描述** 参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按    照一定的格式要求显示在网页上 ` &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt;     &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;">
+<meta name="description" content="任务描述 参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按    照一定的格式要求显示在网页上`&amp;lt;!DOCTYPE html&amp;gt;          Title     污染城市列表                         var aqiData = [            [“北京”, 90],">
 <meta name="keywords" content="javaScript 百度前端学院">
 <meta property="og:type" content="article">
 <meta property="og:title" content="百度前端学院js 任务二:零基础javaScript编码(二)">
 <meta property="og:url" content="http://yoursite.com/2017/07/16/百度前端学院js-任务二-零基础javaScript编码-二/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="**任务描述** 参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按    照一定的格式要求显示在网页上 ` &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt;     &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;">
-<meta property="og:updated_time" content="2017-07-16T02:11:07.781Z">
+<meta property="og:description" content="任务描述 参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按    照一定的格式要求显示在网页上`&amp;lt;!DOCTYPE html&amp;gt;          Title     污染城市列表                         var aqiData = [            [“北京”, 90],">
+<meta property="og:updated_time" content="2017-08-02T07:07:27.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="百度前端学院js 任务二:零基础javaScript编码(二)">
-<meta name="twitter:description" content="**任务描述** 参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按    照一定的格式要求显示在网页上 ` &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt;     &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;">
+<meta name="twitter:description" content="任务描述 参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按    照一定的格式要求显示在网页上`&amp;lt;!DOCTYPE html&amp;gt;          Title     污染城市列表                         var aqiData = [            [“北京”, 90],">
 
 
 
@@ -321,71 +321,17 @@
       
 
       
-        <pre><code>**任务描述**
-参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按    照一定的格式要求显示在网页上
-`
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h3&gt;污染城市列表&lt;/h3&gt;
-    &lt;ul id=&quot;api-list&quot;&gt;
-        &lt;!--
-    &lt;li&gt;第一名：福州（样例），10&lt;/li&gt;
-      &lt;li&gt;第二名：福州（样例），10&lt;/li&gt; --&gt;
-    &lt;/ul&gt;
-    &lt;script type=&quot;text/javascript&quot;&gt;
-
-        var aqiData = [
-            [&quot;北京&quot;, 90],
-            [&quot;上海&quot;, 50],
-            [&quot;福州&quot;, 10],
-            [&quot;广州&quot;, 50],
-            [&quot;成都&quot;, 90],
-            [&quot;西安&quot;, 100]
-        ];
-
-        (function () {
-
-            /*
-             在注释下方编写代码
-             遍历读取aqiData中各个城市的数据
-             将空气质量指数大于60的城市显示到aqi-list的列表中
-             */
-            //获取ul元素
-            var api_list = document.getElementById(&quot;api-list&quot;);
-            //要获得名次
-            var ranking = [&apos;一&apos;,&apos;二&apos;,&apos;三&apos;,&apos;四&apos;,&apos;五&apos;,&apos;六&apos;];
-            //用sort()方法对城市进行排名
-           /* aqiData.sort(compare);
-            function compare(a,b){
-                return b[1] - a[1]
-            }*/
-           aqiData.sort(function(a,b){
-               return b[1] - a[1]; // [1]利用数组的索引值获取数组的数字进行排序
-           })
-            //遍历所有数组
-            for(var i = 0;i&lt;aqiData.length;i++){
+        <p><strong>任务描述</strong><br> 参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按    照一定的格式要求显示在网页上<br>`<br>&lt;!DOCTYPE html&gt;</p>
+<p><html lang="en"></html></p>
+<p><head><br>    <meta charset="UTF-8"><br>    <title>Title</title><br></head></p>
+<p><body><br>    <h3>污染城市列表</h3><br>    <ul id="api-list"><br>        <!--
+    <li>第一名：福州（样例），10</li>
+      <li>第二名：福州（样例），10</li> --><br>    </ul></body></p>
+<p><script type="text/javascript"><br>        var aqiData = [<br>            [“北京”, 90],<br>            [“上海”, 50],<br>            [“福州”, 10],<br>            [“广州”, 50],<br>            [“成都”, 90],<br>            [“西安”, 100]<br>        ];<br>        (function () {<br>            /<em><br>             在注释下方编写代码<br>             遍历读取aqiData中各个城市的数据<br>             将空气质量指数大于60的城市显示到aqi-list的列表中
+             </em>/<br>            //获取ul元素<br>            var api_list = document.getElementById(“api-list”);<br>            //要获得名次<br>            var ranking = [‘一’,’二’,’三’,’四’,’五’,’六’];<br>            //用sort()方法对城市进行排名<br>           /<em> aqiData.sort(compare);<br>            function compare(a,b){<br>                return b[1] - a[1]<br>            }</em>/<br>           aqiData.sort(function(a,b){<br>               return b[1] - a[1]; // [1]利用数组的索引值获取数组的数字进行排序<br>           })<br>            //遍历所有数组<br>            for(var i = 0;i<aqiData.length;i++){
                //判断数字是否大于60
-                if(aqiData[i][1] &gt; 60){
-                    //创建li元素
-                    var lis = document.createElement(&apos;li&apos;);
-                    //设置创建的li元素的文本内容
-                    lis.innerHTML = &apos;第&apos; + ranking[i] + &apos;名:&apos; + aqiData[i][0] +&apos;,&apos;+ aqiData[i][1];
-                    //将li节点添加到ul节点中
-                    api_list.appendChild(lis);
-                }
-            }
-        })();
+                if(aqiData[i][1] > 60){<br>                    //创建li元素<br>                    var lis = document.createElement(‘li’);<br>                    //设置创建的li元素的文本内容<br>                    lis.innerHTML = ‘第’ + ranking[i] + ‘名:’ + aqiData[i][0] +’,’+ aqiData[i][1];<br>                    //将li节点添加到ul节点中<br>                    api_list.appendChild(lis);<br>                }<br>            }<br>        }<br>    </script><br><br><br>`</p>
 
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-`
-</code></pre>
       
     </div>
 
@@ -486,8 +432,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://wx4.sinaimg.cn/mw1024/7fcb62e8ly1fgm1vtgy37j20k00qo3zm.jpg"
@@ -502,7 +457,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -559,6 +514,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">污染城市列表</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
