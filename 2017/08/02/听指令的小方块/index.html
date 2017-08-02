@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="任务描述如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，对输入框中内容进行格式校验，并在其下方显示校验结果校验规则：1.字符数为4~16位2.每个英文字母、数字、英文符号长度为13.每个汉字，中文符号长度为2我的实现详细代码">
+<meta name="description" content="任务描述实现一个类似棋盘的格子空间，每个格子用两个数字可以定位，一个红正方形的DOM在这个空间内，正方形中的蓝色边表示这是他的正面有一个input输入框在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）TUN LEF：向左转（逆时针旋转90度）TUN RIG：向右转（顺时针旋转90度）TUN BAC：向右转（旋转180度）移动不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="百度前端学院js综合练习 任务一:表单(一)单个表单项的检验">
-<meta property="og:url" content="http://yoursite.com/2017/07/24/百度前端学院js综合练习-任务一-表单-一-单个表单项的检验/index.html">
+<meta property="og:title" content="听指令的小方块">
+<meta property="og:url" content="http://yoursite.com/2017/08/02/听指令的小方块/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="任务描述如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，对输入框中内容进行格式校验，并在其下方显示校验结果校验规则：1.字符数为4~16位2.每个英文字母、数字、英文符号长度为13.每个汉字，中文符号长度为2我的实现详细代码">
-<meta property="og:updated_time" content="2017-08-02T08:19:25.190Z">
+<meta property="og:description" content="任务描述实现一个类似棋盘的格子空间，每个格子用两个数字可以定位，一个红正方形的DOM在这个空间内，正方形中的蓝色边表示这是他的正面有一个input输入框在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）TUN LEF：向左转（逆时针旋转90度）TUN RIG：向右转（顺时针旋转90度）TUN BAC：向右转（旋转180度）移动不">
+<meta property="og:updated_time" content="2017-08-02T08:35:53.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="百度前端学院js综合练习 任务一:表单(一)单个表单项的检验">
-<meta name="twitter:description" content="任务描述如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，对输入框中内容进行格式校验，并在其下方显示校验结果校验规则：1.字符数为4~16位2.每个英文字母、数字、英文符号长度为13.每个汉字，中文符号长度为2我的实现详细代码">
+<meta name="twitter:title" content="听指令的小方块">
+<meta name="twitter:description" content="任务描述实现一个类似棋盘的格子空间，每个格子用两个数字可以定位，一个红正方形的DOM在这个空间内，正方形中的蓝色边表示这是他的正面有一个input输入框在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）TUN LEF：向左转（逆时针旋转90度）TUN RIG：向右转（顺时针旋转90度）TUN BAC：向右转（旋转180度）移动不">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/24/百度前端学院js综合练习-任务一-表单-一-单个表单项的检验/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/02/听指令的小方块/"/>
 
 
 
 
 
-  <title>百度前端学院js综合练习 任务一:表单(一)单个表单项的检验 | 西元前</title>
+  <title>听指令的小方块 | 西元前</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/24/百度前端学院js综合练习-任务一-表单-一-单个表单项的检验/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/02/听指令的小方块/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘珠">
@@ -273,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">百度前端学院js综合练习 任务一:表单(一)单个表单项的检验</h1>
+          <h1 class="post-title" itemprop="name headline">听指令的小方块</h1>
         
 
         <div class="post-meta">
@@ -285,8 +285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-24T14:24:41+08:00">
-                2017-07-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-02T16:24:10+08:00">
+                2017-08-02
               </time>
             
 
@@ -320,7 +320,7 @@
       
 
       
-        <p><strong>任务描述</strong><br>如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，<br>对输入框中内容进行格式校验，并在其下方显示校验结果<br>校验规则：<br>1.字符数为4~16位<br>2.每个英文字母、数字、英文符号长度为1<br>3.每个汉字，中文符号长度为2<br><a href="http://htmlpreview.github.io/?https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E8%A1%A8%E5%8D%95%EF%BC%88%E4%B8%80%EF%BC%89%E5%8D%95%E4%B8%AA%E8%A1%A8%E5%8D%95%E9%A1%B9%E7%9A%84%E6%A3%80%E9%AA%8C/1.html" target="_blank" rel="external">我的实现</a><br><a href="https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E8%A1%A8%E5%8D%95%EF%BC%88%E4%B8%80%EF%BC%89%E5%8D%95%E4%B8%AA%E8%A1%A8%E5%8D%95%E9%A1%B9%E7%9A%84%E6%A3%80%E9%AA%8C/1.html" target="_blank" rel="external">详细代码</a></p>
+        <p><strong>任务描述</strong><br>实现一个类似棋盘的格子空间，每个格子用两个数字可以定位，一个红正方形的DOM在这个空间内，正方形中的蓝色边表示这是他的正面<br>有一个input输入框<br>在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作<br>GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）<br>TUN LEF：向左转（逆时针旋转90度）<br>TUN RIG：向右转（顺时针旋转90度）<br>TUN BAC：向右转（旋转180度）<br>移动不能超出格子空间<br><a href="http://htmlpreview.github.io/?https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%90%AC%E6%8C%87%E4%BB%A4%E7%9A%84%E5%B0%8F%E6%96%B9%E5%9D%97%EF%BC%88%E4%B8%80%EF%BC%89/4.html" target="_blank" rel="external">我的实现</a><br><a href="https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%90%AC%E6%8C%87%E4%BB%A4%E7%9A%84%E5%B0%8F%E6%96%B9%E5%9D%97%EF%BC%88%E4%B8%80%EF%BC%89/4.html" target="_blank" rel="external">详细代码</a></p>
 
       
     </div>
@@ -357,8 +357,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/23/百度前端学院-js任务-笔记-一/" rel="next" title="百度前端学院 js任务 笔记(一)">
-                <i class="fa fa-chevron-left"></i> 百度前端学院 js任务 笔记(一)
+              <a href="/2017/08/02/表单-三-联动/" rel="next" title="表单(三)联动">
+                <i class="fa fa-chevron-left"></i> 表单(三)联动
               </a>
             
           </div>
@@ -367,8 +367,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/25/正则的一些常用表达式/" rel="prev" title="正则的一些常用表达式">
-                正则的一些常用表达式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/02/UI组件之浮出层/" rel="prev" title="UI组件之浮出层">
+                UI组件之浮出层 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
