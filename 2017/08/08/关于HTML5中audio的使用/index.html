@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="HTML5,audio," />
 
 
 
@@ -93,16 +93,17 @@
 
 
 
-<meta name="description" content="任务描述实现一个类似棋盘的格子空间，每个格子用两个数字可以定位，一个红正方形的DOM在这个空间内，正方形中的蓝色边表示这是他的正面有一个input输入框在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）TUN LEF：向左转（逆时针旋转90度）TUN RIG：向右转（顺时针旋转90度）TUN BAC：向右转（旋转180度）移动不">
+<meta name="description" content="HTML5的audio功能上已经非常强大，回放，跳转，缓冲等以前只能用flash才能实现的功能，html5的audio都能轻松搞定，最近刚做了一个相关的demo，可以看我的豆瓣音乐播放器那篇文章，下面我就将关于audio的一些属性,方法和我遇到的几个问题以及解决法一一列举出来 首先关于不能正确的获取音频时长，总是显示(NaN),以及给相应按钮添加播放时的监听函数(获取音频的时长，获取剩余时长进行转">
+<meta name="keywords" content="HTML5,audio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="听指令的小方块">
-<meta property="og:url" content="http://yoursite.com/2017/08/02/听指令的小方块/index.html">
+<meta property="og:title" content="关于HTML5中audio的使用">
+<meta property="og:url" content="http://yoursite.com/2017/08/08/关于HTML5中audio的使用/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="任务描述实现一个类似棋盘的格子空间，每个格子用两个数字可以定位，一个红正方形的DOM在这个空间内，正方形中的蓝色边表示这是他的正面有一个input输入框在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）TUN LEF：向左转（逆时针旋转90度）TUN RIG：向右转（顺时针旋转90度）TUN BAC：向右转（旋转180度）移动不">
-<meta property="og:updated_time" content="2017-08-02T08:35:53.945Z">
+<meta property="og:description" content="HTML5的audio功能上已经非常强大，回放，跳转，缓冲等以前只能用flash才能实现的功能，html5的audio都能轻松搞定，最近刚做了一个相关的demo，可以看我的豆瓣音乐播放器那篇文章，下面我就将关于audio的一些属性,方法和我遇到的几个问题以及解决法一一列举出来 首先关于不能正确的获取音频时长，总是显示(NaN),以及给相应按钮添加播放时的监听函数(获取音频的时长，获取剩余时长进行转">
+<meta property="og:updated_time" content="2017-08-08T00:46:20.889Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="听指令的小方块">
-<meta name="twitter:description" content="任务描述实现一个类似棋盘的格子空间，每个格子用两个数字可以定位，一个红正方形的DOM在这个空间内，正方形中的蓝色边表示这是他的正面有一个input输入框在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）TUN LEF：向左转（逆时针旋转90度）TUN RIG：向右转（顺时针旋转90度）TUN BAC：向右转（旋转180度）移动不">
+<meta name="twitter:title" content="关于HTML5中audio的使用">
+<meta name="twitter:description" content="HTML5的audio功能上已经非常强大，回放，跳转，缓冲等以前只能用flash才能实现的功能，html5的audio都能轻松搞定，最近刚做了一个相关的demo，可以看我的豆瓣音乐播放器那篇文章，下面我就将关于audio的一些属性,方法和我遇到的几个问题以及解决法一一列举出来 首先关于不能正确的获取音频时长，总是显示(NaN),以及给相应按钮添加播放时的监听函数(获取音频的时长，获取剩余时长进行转">
 
 
 
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/02/听指令的小方块/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/08/关于HTML5中audio的使用/"/>
 
 
 
 
 
-  <title>听指令的小方块 | 西元前</title>
+  <title>关于HTML5中audio的使用 | 西元前</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +257,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/02/听指令的小方块/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/08/关于HTML5中audio的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘珠">
@@ -273,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">听指令的小方块</h1>
+          <h1 class="post-title" itemprop="name headline">关于HTML5中audio的使用</h1>
         
 
         <div class="post-meta">
@@ -285,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-02T16:24:10+08:00">
-                2017-08-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-08T08:15:49+08:00">
+                2017-08-08
               </time>
             
 
@@ -320,7 +321,29 @@
       
 
       
-        <p><strong>任务描述</strong><br>实现一个类似棋盘的格子空间，每个格子用两个数字可以定位，一个红正方形的DOM在这个空间内，正方形中的蓝色边表示这是他的正面<br>有一个input输入框<br>在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作<br>GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）<br>TUN LEF：向左转（逆时针旋转90度）<br>TUN RIG：向右转（顺时针旋转90度）<br>TUN BAC：向右转（旋转180度）<br>移动不能超出格子空间<br><a href="http://htmlpreview.github.io/?https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%90%AC%E6%8C%87%E4%BB%A4%E7%9A%84%E5%B0%8F%E6%96%B9%E5%9D%97%EF%BC%88%E4%B8%80%EF%BC%89/4.html" target="_blank" rel="external">我的实现</a><br><a href="https://github.com/liuzhu1995/practise/blob/master/%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%90%AC%E6%8C%87%E4%BB%A4%E7%9A%84%E5%B0%8F%E6%96%B9%E5%9D%97%EF%BC%88%E4%B8%80%EF%BC%89/4.html" target="_blank" rel="external">详细代码</a></p>
+        <p>HTML5的audio功能上已经非常强大，回放，跳转，缓冲等以前只能用flash才能实现的功能，html5的audio都能轻松搞定，<br>最近刚做了一个相关的demo，可以看我的豆瓣音乐播放器那篇文章，下面我就将关于audio的一些属性,方法和我遇到的几个问题以及解决<br>法一一列举出来</p>
+<p>首先关于不能正确的获取音频时长，总是显示(NaN),以及给相应按钮添加播放时的监听函数(获取音频的时长，获取剩余时长进行转换，<br>根据对应的时长改变进度条)在第一次点击时都不起作用，之后点击才会有效，问题的原因就是加载音频资源是异步的，还没加载完成的音频资源，点击时不会有效<br><strong>解决方法</strong><br>//  监听是否准备好音频，再执行操作<br>    audio.addEventListener(“canplay”, function(){要执行的操作})<br>哈哈哈，这样就解决了</p>
+<p><strong>只读属性</strong><br>duration —获取媒体文件的播放时长，以s为单位，如果无法获取则为NaN，当触发canplay事件后就可以获取当前总长度<br>paused—–判断是否已经暂停，返回true/false<br>ended—–判断是否已经播放完毕，返回true/false<br>error—-在发生了错误后，返回错误代码<br>currentSrc –以字符串的形式发挥正在播放或已经加载的文件，对应浏览器在source元素中选择的文件<br>buffered—获取当前缓冲区大小，返回TimeRanges对象</p>
+<p><strong>可控属性</strong><br>可控制属性<br>src—-指定音频的文件位置<br>autoplay—是否自动播放<br>preload—-是否预加载<br>loop——是否循环播放<br>controls—-显示或隐藏用户控制界面<br>muted——设置是否静音<br>volume —-在0.0到1.0间的音量值，或查询当前音量值<br>currentTime–以s为单位返回从开始播放到目前所花的时间，也可设置currentTime的值来跳转到特定位置</p>
+<p><strong>方法</strong><br>load() —加载音频、视频软件<br>paly() —播放<br>pause()—暂停<br>canPlayType(obj) —-测试饭后指定指定的Mime类型的文件</p>
+<p><strong>事件</strong><br>loadstart —客户端开始请求数据<br>progress—-正在播放的时候不停触发，如果暂停不会触发，触发的时间间隔比较大<br>play——play()和autopaly播放时，类似事件onplaying<br>pause—–pause()方法触发时<br>ended—–当结束播放时<br>timeupdate—-当前播放时间发生改变的时候，播放中常用的时间处理，如果暂停不会触发，触发的时间间隔比较小<br>canplaythrough—歌曲已经载入完成<br>canplay —–缓冲至可播放状态，类似事件onloadedmetadata<br>onloadedmetadata—-当元数据（比如分辨率和时长）被加载时运行的脚本</p>
+<p><strong>更多属性</strong></p>
+<p>audioTracks—-返回表示可用音频滚到的AudioTrackList对象。</p>
+<p>controller—返回表示音频大年媒体控制器的MediaController对象。</p>
+<p>crossOrigin—设置或返回音频的CORS设置</p>
+<p>defaultMuted—设置或返回音频默认是否静音</p>
+<p>defaultPlaybackRate—设置或返回音频的默认播放速度</p>
+<p>mediaGroup—属性设置或返回音频/视频所属的媒体组合的名称。</p>
+<p>networkState—返回音频的当前网络状态</p>
+<p>playbackRate—设置或返回音频的播放速度。</p>
+<p>seekable—返回标识音频可寻址不烦的TimeRanges对象</p>
+<p>seeking—返回用户当前收正在音频中进行查找。</p>
+<p>textTracks—返回标识文本滚到的TextTrackList对象</p>
+<p><strong>更多方法</strong></p>
+<p>load()—-重新加载音频元素</p>
+<p>getStartDate()—-返回新的Date对象，表示当前时间线偏移量。</p>
+<p>fastSeek()—在音频播放器中指定播放时间。</p>
+<p>addTextTrack()—-想音频添加新的文本轨道。</p>
 
       
     </div>
@@ -348,6 +371,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5/" rel="tag"># HTML5</a>
+          
+            <a href="/tags/audio/" rel="tag"># audio</a>
+          
+        </div>
+      
 
       
       
@@ -357,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/02/表单-三-联动/" rel="next" title="表单(三)联动">
-                <i class="fa fa-chevron-left"></i> 表单(三)联动
+              <a href="/2017/08/07/仿豆瓣音乐播放器-原生js实现/" rel="next" title="仿豆瓣音乐播放器(原生js实现)">
+                <i class="fa fa-chevron-left"></i> 仿豆瓣音乐播放器(原生js实现)
               </a>
             
           </div>
@@ -366,10 +397,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/02/UI组件之浮出层/" rel="prev" title="UI组件之浮出层">
-                UI组件之浮出层 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
