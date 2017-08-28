@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -93,16 +93,17 @@
 
 
 
-<meta name="description" content="在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间也写了好些笔记在本子上，现在将它搬上来节点信息childNodes可以获取任意节点的所有子节点集合通过节点类型nodeType区分的有(element元素节点(1,节点类">
+<meta name="description" content="实现原理：通过获取图片的宽度计算当前网页可视宽度当中图片存在的列数，计算第一行高度最小的图片然后将下一行的图片利用绝对定位属性添加在高度最小图片的后面(动态改变此列的高度)已达到不断将图片添加在上一行最小高度图片的后面。 onscroll事件在元素滚动条在滚动时触发。apply方法：语法：apply([thisObj[,argArray]])定义：应用某一对象的一个方法，用另一个对象替换当前对象。">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="百度前端学院 js任务 笔记(一)">
-<meta property="og:url" content="http://yoursite.com/2017/07/23/百度前端学院-js任务-笔记-一/index.html">
+<meta property="og:title" content="原生js实现瀑布流布局">
+<meta property="og:url" content="http://yoursite.com/2017/08/28/原生js实现瀑布流布局/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间也写了好些笔记在本子上，现在将它搬上来节点信息childNodes可以获取任意节点的所有子节点集合通过节点类型nodeType区分的有(element元素节点(1,节点类">
-<meta property="og:updated_time" content="2017-08-02T07:37:15.540Z">
+<meta property="og:description" content="实现原理：通过获取图片的宽度计算当前网页可视宽度当中图片存在的列数，计算第一行高度最小的图片然后将下一行的图片利用绝对定位属性添加在高度最小图片的后面(动态改变此列的高度)已达到不断将图片添加在上一行最小高度图片的后面。 onscroll事件在元素滚动条在滚动时触发。apply方法：语法：apply([thisObj[,argArray]])定义：应用某一对象的一个方法，用另一个对象替换当前对象。">
+<meta property="og:updated_time" content="2017-08-28T12:10:54.608Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="百度前端学院 js任务 笔记(一)">
-<meta name="twitter:description" content="在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间也写了好些笔记在本子上，现在将它搬上来节点信息childNodes可以获取任意节点的所有子节点集合通过节点类型nodeType区分的有(element元素节点(1,节点类">
+<meta name="twitter:title" content="原生js实现瀑布流布局">
+<meta name="twitter:description" content="实现原理：通过获取图片的宽度计算当前网页可视宽度当中图片存在的列数，计算第一行高度最小的图片然后将下一行的图片利用绝对定位属性添加在高度最小图片的后面(动态改变此列的高度)已达到不断将图片添加在上一行最小高度图片的后面。 onscroll事件在元素滚动条在滚动时触发。apply方法：语法：apply([thisObj[,argArray]])定义：应用某一对象的一个方法，用另一个对象替换当前对象。">
 
 
 
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/23/百度前端学院-js任务-笔记-一/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/28/原生js实现瀑布流布局/"/>
 
 
 
 
 
-  <title>百度前端学院 js任务 笔记(一) | 西元前</title>
+  <title>原生js实现瀑布流布局 | 西元前</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +257,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/23/百度前端学院-js任务-笔记-一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/原生js实现瀑布流布局/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘珠">
@@ -273,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">百度前端学院 js任务 笔记(一)</h1>
+          <h1 class="post-title" itemprop="name headline">原生js实现瀑布流布局</h1>
         
 
         <div class="post-meta">
@@ -285,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T20:21:38+08:00">
-                2017-07-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T16:37:32+08:00">
+                2017-08-28
               </time>
             
 
@@ -320,19 +321,10 @@
       
 
       
-        <p><strong>在做这九个任务期间，确实比盲目学习进步要大，在完成的过程一边写一边查资料，<br>也看了别人在git上的代码，对比后确实虽然功能能做出来，但是自己有些地方确实写<br>的比较繁琐，if语句套过来过去的，后面也在最后的任务九中做了一些优化改动，期间<br>也写了好些笔记在本子上，现在将它搬上来</strong><br><strong>节点信息</strong><br>childNodes可以获取任意节点的所有子节点集合<br>通过节点类型nodeType区分的有(element元素节点(1,节点类型)，attr属性节点(2),text文本节点(3),<br>comments注释(8),document(9))<br>element是node多种类型的其中一种，当nodeType == 1 时就是元素节点，它拥有id,class,children等属性。</p>
-<p><strong>subString(a,b)</strong><br>用于提取字符串中介于两个指定下标之间的字符,它有两个参数,都是非负的证书,第一个要提取的字符串<br>的第一个字符,第二个可选,如果省略返回的字符串一直到字符串的结尾。</p>
-<p><strong>innerHTML和innerText</strong><br>innerHTML 设置或返回指定元素开始标签与结束标签中的所有元素(自己和所有子元素)内容，包括标签元素。<br>innerText 设置或者返回指定元素开始标签与结束标签中的所有(自己和所有子元素)文本内容。</p>
-<p><strong>push()</strong><br>向数组末尾添加一个或者多个元素，并且返回新长度。<br>最常用就是创建一个新数组var arr = []，在遍历的时候，将符合if条件的元素或者任意属性<br>添加到arr里面(arr.push());</p>
-<p><strong>insetBefore()</strong><br>将一个新元素插入到一个现有元素的前面。<br>parentElement.insetBefore(new.Element,targetElement)<br>parentElement就是targetElement.parent</p>
-<p><strong>removeChild()</strong><br>fatherObj.removeChild(childrenObj)<br>fatherObj要删除元素的元素对象，childrenObj要被删除的子元素对象</p>
-<p><strong>childNodes和children</strong><br>childNodes返回节点的子元素集合，包括HTML节点，所有属性，文本节点。<br>可以通过nodeType来判断是哪种类型的节点，只有当nodeType==1时才是元素节点，2是属性节点，3是文本节点。<br>children它返回指定元素的子元素集合。但它只返回HTML节点，甚至不返回文本节点</p>
-<p><strong>split()和join()</strong><br>split()用于把一个字符串分割成字符串数组 有两个参数，第一个必须 字符串或正则表达式 第二个可选返回数组的最大长度<br>join()将一个数组合并成字符串</p>
-<p><strong>replace()</strong><br>用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式相匹配的子串。<br>stringObject.replace(regexp/substr,replacement)<br>regexp/substr 必须，规定字符串或需要替换的模式的regexp<br>replacement 必须，一个字符串值，替换文本或者生成替换文本的函数</p>
-<p><strong>eval()</strong><br>可以用这个生成正则 例如  eval(“/“+ x +”/g”) x任意字符  用来匹配所有符合x值的字符串</p>
-<p><strong>foeEach()</strong><br>遍历循环 for的简化和for()循环的效果一样<br>例如：var a = [,9,2,3,7,5,6];<br> a.forEach(function(e){<br>         alert(e);<br>   }) 会依次弹出数组里面的值</p>
-<p><strong>阻止事件冒泡</strong><br>e.stopPropagation()</p>
-<p><strong>classList属性</strong><br>返回元素的类名，可以用来增加或者删除指定的类名，它会自行判断这个类是否存在<br>添加:element.classList.add();<br>删除:element.classList.remove()</p>
+        <p>实现原理：通过获取图片的宽度计算当前网页可视宽度当中图片存在的列数，计算第一行高度最小的图片然后将下一行的图片利用绝对定位属性添加在高度最小图片的后面(动态改变此列的高度)已达到不断将图片添加在上一行最小高度图片的后面。</p>
+<p><strong>onscroll事件在元素滚动条在滚动时触发。</strong><br><strong>apply方法：</strong><br>语法：apply([thisObj[,argArray]])<br>定义：应用某一对象的一个方法，用另一个对象替换当前对象。<br> &emsp;obj：这个对象将代替Function类里this对象<br> &emsp;args：这个是数组，它将作为参数传给Function（args–&gt;arguments）<br>巧妙用法：可以将一个数组默认的转换为一个参数列表([param1,param2,param3] 转换为 param1,param2,param3)<br> &emsp;Math.max.apply()可以得到数组当中最大的一个值<br> &emsp;Math.max()不支持数组，但是支持Math.max(param1,param2,param3…paramN);<br> &emsp;Math.max.apply(null,array),第一个参数填null，第二个参数填写数组<br> &emsp;获取最小数同理<br>Array.prototype.push 可以实现两个数组合并<br> &emsp;同样push方法没有提供push一个数组,但是它提供了push(param1,param,…paramN) 所以同样也可以通过apply来装换一下这个数组,即:<br> &emsp;var arr1=new Array(“1”,”2”,”3”);<br> &emsp;var arr2=new Array(“4”,”5”,”6”);<br> &emsp;Array.prototype.push.apply(arr1,arr2);</p>
+<p><strong>cssText 可以批量设置样式</strong><br>例如：<br> &emsp;var element = document.getElementById(‘’);<br> &emsp;element.style.width = “100px”；<br> &emsp;element.style.heigth = “200px”；<br> &emsp;可以直接用 cssText 一起修改<br> &emsp;element.style.cssText = ‘width:100px;height:200px;border:1px solid #fff;margin:0 auto’;</p>
+<p>##详细代码请看我的<a href="https://github.com/liuzhu1995/practise/tree/master/%E7%80%91%E5%B8%83%E6%B5%81" target="_blank" rel="external">github</a></p>
 
       
     </div>
@@ -360,6 +352,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
 
       
       
@@ -369,8 +367,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/23/百度前端技术学院-js任务九-javaScript-三/" rel="next" title="百度前端技术学院 js任务九:javaScript(三)">
-                <i class="fa fa-chevron-left"></i> 百度前端技术学院 js任务九:javaScript(三)
+              <a href="/2017/08/26/最近生活/" rel="next" title="最近生活">
+                <i class="fa fa-chevron-left"></i> 最近生活
               </a>
             
           </div>
@@ -378,10 +376,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/24/百度前端学院js综合练习-任务一-表单-一-单个表单项的检验/" rel="prev" title="百度前端学院js综合练习 任务一:表单(一)单个表单项的检验">
-                百度前端学院js综合练习 任务一:表单(一)单个表单项的检验 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
