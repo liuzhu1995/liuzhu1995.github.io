@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/28/原生js实现瀑布流布局/index.html">
 <meta property="og:site_name" content="西元前">
 <meta property="og:description" content="实现原理：通过获取图片的宽度计算当前网页可视宽度当中图片存在的列数，计算第一行高度最小的图片然后将下一行的图片利用绝对定位属性添加在高度最小图片的后面(动态改变此列的高度)已达到不断将图片添加在上一行最小高度图片的后面。 onscroll事件在元素滚动条在滚动时触发。apply方法：语法：apply([thisObj[,argArray]])定义：应用某一对象的一个方法，用另一个对象替换当前对象。">
-<meta property="og:updated_time" content="2017-08-28T12:10:54.608Z">
+<meta property="og:updated_time" content="2017-08-28T12:11:32.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生js实现瀑布流布局">
 <meta name="twitter:description" content="实现原理：通过获取图片的宽度计算当前网页可视宽度当中图片存在的列数，计算第一行高度最小的图片然后将下一行的图片利用绝对定位属性添加在高度最小图片的后面(动态改变此列的高度)已达到不断将图片添加在上一行最小高度图片的后面。 onscroll事件在元素滚动条在滚动时触发。apply方法：语法：apply([thisObj[,argArray]])定义：应用某一对象的一个方法，用另一个对象替换当前对象。">
@@ -323,8 +323,7 @@
       
         <p>实现原理：通过获取图片的宽度计算当前网页可视宽度当中图片存在的列数，计算第一行高度最小的图片然后将下一行的图片利用绝对定位属性添加在高度最小图片的后面(动态改变此列的高度)已达到不断将图片添加在上一行最小高度图片的后面。</p>
 <p><strong>onscroll事件在元素滚动条在滚动时触发。</strong><br><strong>apply方法：</strong><br>语法：apply([thisObj[,argArray]])<br>定义：应用某一对象的一个方法，用另一个对象替换当前对象。<br> &emsp;obj：这个对象将代替Function类里this对象<br> &emsp;args：这个是数组，它将作为参数传给Function（args–&gt;arguments）<br>巧妙用法：可以将一个数组默认的转换为一个参数列表([param1,param2,param3] 转换为 param1,param2,param3)<br> &emsp;Math.max.apply()可以得到数组当中最大的一个值<br> &emsp;Math.max()不支持数组，但是支持Math.max(param1,param2,param3…paramN);<br> &emsp;Math.max.apply(null,array),第一个参数填null，第二个参数填写数组<br> &emsp;获取最小数同理<br>Array.prototype.push 可以实现两个数组合并<br> &emsp;同样push方法没有提供push一个数组,但是它提供了push(param1,param,…paramN) 所以同样也可以通过apply来装换一下这个数组,即:<br> &emsp;var arr1=new Array(“1”,”2”,”3”);<br> &emsp;var arr2=new Array(“4”,”5”,”6”);<br> &emsp;Array.prototype.push.apply(arr1,arr2);</p>
-<p><strong>cssText 可以批量设置样式</strong><br>例如：<br> &emsp;var element = document.getElementById(‘’);<br> &emsp;element.style.width = “100px”；<br> &emsp;element.style.heigth = “200px”；<br> &emsp;可以直接用 cssText 一起修改<br> &emsp;element.style.cssText = ‘width:100px;height:200px;border:1px solid #fff;margin:0 auto’;</p>
-<p>##详细代码请看我的<a href="https://github.com/liuzhu1995/practise/tree/master/%E7%80%91%E5%B8%83%E6%B5%81" target="_blank" rel="external">github</a></p>
+<p><strong>cssText 可以批量设置样式</strong><br>例如：<br> &emsp;var element = document.getElementById(‘’);<br> &emsp;element.style.width = “100px”；<br> &emsp;element.style.heigth = “200px”；<br> &emsp;可以直接用 cssText 一起修改<br> &emsp;element.style.cssText = ‘width:100px;height:200px;border:1px solid #fff;margin:0 auto’;<br>详细代码请看我的<a href="https://github.com/liuzhu1995/practise/tree/master/%E7%80%91%E5%B8%83%E6%B5%81" target="_blank" rel="external">github</a></p>
 
       
     </div>
@@ -376,6 +375,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/31/jQuery动态生成的元素无法触发事件/" rel="prev" title="jQuery动态生成的元素无法触发事件">
+                jQuery动态生成的元素无法触发事件 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -438,7 +441,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -451,7 +454,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
