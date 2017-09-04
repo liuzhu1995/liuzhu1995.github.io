@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="栈是哟中遵从先进后出原则的有序集合。新添加的或待删除的元素都保存在栈的末尾，称做栈顶另一端叫栈底。在栈里新元素都靠近栈顶，旧元素都靠进栈底。 ##栈的创建      function Stack(){ //        各种属性和方法的声明         var items = []; //        在栈顶添加元素         this.push = function(element">
+<meta name="description" content="栈是哟中遵从先进后出原则的有序集合。新添加的或待删除的元素都保存在栈的末尾，称做栈顶另一端叫栈底。在栈里新元素都靠近栈顶，旧元素都靠进栈底。栈的创建` function Stack(){ // 各种属性和方法的声明    var items = [];    // 在栈顶添加元素        this.push = function(element){        items.push(ele">
 <meta name="keywords" content="-数据结构与算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构与算法-栈">
 <meta property="og:url" content="http://yoursite.com/2017/09/03/数据结构与算法-栈/index.html">
 <meta property="og:site_name" content="西元前">
-<meta property="og:description" content="栈是哟中遵从先进后出原则的有序集合。新添加的或待删除的元素都保存在栈的末尾，称做栈顶另一端叫栈底。在栈里新元素都靠近栈顶，旧元素都靠进栈底。 ##栈的创建      function Stack(){ //        各种属性和方法的声明         var items = []; //        在栈顶添加元素         this.push = function(element">
-<meta property="og:updated_time" content="2017-09-03T09:13:59.752Z">
+<meta property="og:description" content="栈是哟中遵从先进后出原则的有序集合。新添加的或待删除的元素都保存在栈的末尾，称做栈顶另一端叫栈底。在栈里新元素都靠近栈顶，旧元素都靠进栈底。栈的创建` function Stack(){ // 各种属性和方法的声明    var items = [];    // 在栈顶添加元素        this.push = function(element){        items.push(ele">
+<meta property="og:updated_time" content="2017-09-04T04:21:15.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构与算法-栈">
-<meta name="twitter:description" content="栈是哟中遵从先进后出原则的有序集合。新添加的或待删除的元素都保存在栈的末尾，称做栈顶另一端叫栈底。在栈里新元素都靠近栈顶，旧元素都靠进栈底。 ##栈的创建      function Stack(){ //        各种属性和方法的声明         var items = []; //        在栈顶添加元素         this.push = function(element">
+<meta name="twitter:description" content="栈是哟中遵从先进后出原则的有序集合。新添加的或待删除的元素都保存在栈的末尾，称做栈顶另一端叫栈底。在栈里新元素都靠近栈顶，旧元素都靠进栈底。栈的创建` function Stack(){ // 各种属性和方法的声明    var items = [];    // 在栈顶添加元素        this.push = function(element){        items.push(ele">
 
 
 
@@ -321,66 +321,9 @@
       
 
       
-        <p>栈是哟中遵从先进后出原则的有序集合。新添加的或待删除的元素都保存在栈的末尾，称做栈顶另一端叫栈底。<br>在栈里新元素都靠近栈顶，旧元素都靠进栈底。</p>
-<p>##栈的创建</p>
-<script>
-    function Stack(){
-//        各种属性和方法的声明
-        var items = [];
-//        在栈顶添加元素
-        this.push = function(element){
-            items.push(element);
-        };
-//        删除栈顶元素，同时返回被删除的元素
-        this.pop = function(){
-          return items.pop();
-        };
-//        返回栈顶元素，不做任何修改
-        this.peek = function(){
-            return items[items.length - 1];
-        };
-//        当栈里没有任何元素时返回true 否则返回false
-        this.isEmpty = function(){
-          return items.length == 0;
-        };
-//        返回栈里元素的个数
-        this.size = function(){
-            return items.length;
-        };
-//        清除栈里面的所有元素
-        this.clear = function(){
-            items = [];
-        };
-//        将栈里的所有元素输出到控制台
-        this.print = function(){
-            console.log(items.toString());
-        }
-    }
-//   将十进制转换为二进制
-    function divideBy2(decNumber,base){ //base 将要转换的进制2，8，10，16
-    //初始化Stack类
-        var remStack = new Stack(),
-            rem,
-            binaryString = '',
-            digits = '0123456789ABCDEF';
-            //当参数满足和base值做整除的条件时
-        while(decNumber > 0){
-        //获得参数和base的余数
-            rem = Math.floor(decNumber % base);
-            //存入栈中
-            remStack.push(rem);
-            //获得参数和base值的除数值
-            decNumber = Math.floor(decNumber / base);
-        }
-        //当栈的值不为空时
-        while(!remStack.isEmpty()){
-        //将栈里的元素用pop()方法移除，移除的元素都连接为字符串
-            binaryString += digits[remStack.pop()];
-        }
-        return binaryString;
-    }
-    console.log(divideBy2(100036984562,8));
-</script>
+        <p>栈是哟中遵从先进后出原则的有序集合。新添加的或待删除的元素都保存在栈的末尾，称做栈顶另一端叫栈底。在栈里新元素都靠近栈顶，旧元素都靠进栈底。<br><strong>栈的创建</strong><br>`</p>
+<p>function Stack(){</p>
+<p>// 各种属性和方法的声明<br>    var items = [];<br>    // 在栈顶添加元素<br>        this.push = function(element){<br>        items.push(element);<br>    };<br>    // 删除栈顶元素，同时返回被删除的元素<br>        this.pop = function(){<br>        return items.pop();<br>    };<br>    // 返回栈顶元素，不做任何修改<br>        this.peek = function(){<br>        return items[items.length - 1];<br>    };<br>    // 当栈里没有任何元素时返回true 否则返回false<br>        this.isEmpty = function(){<br>        return items.length == 0;<br>    };<br>    // 返回栈里元素的个数<br>    this.size = function(){<br>    return items.length;<br>      };<br>      // 清除栈里面的所有元素<br>        this.clear = function(){<br>        items = [];<br>       };<br>        // 将栈里的所有元素输出到控制台<br>        this.print = function(){<br>    console.log(items.toString());<br>    }<br>    // 将十进制转换为二进制<br>    function divideBy2(decNumber,base){<br>    //base 将要转换的进制2，8，10，16<br>    var remStack = new Stack(),<br>    rem,<br>    binaryString = ‘’,<br>        digits = ‘0123456789ABCDEF’;<br>        while(decNumber &gt; 0){<br>        rem = Math.floor(decNumber % base);<br>        remStack.push(rem);<br>        decNumber = Math.floor(decNumber / base);<br>    }<br>            while(!remStack.isEmpty()){<br>            binaryString += digits[remStack.pop()];<br>        }<br>    return binaryString;<br>    }<br>    console.log(divideBy2(100036984562,8));<br>`</p>
 
       
     </div>
